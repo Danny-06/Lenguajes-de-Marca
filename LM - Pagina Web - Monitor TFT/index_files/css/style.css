@@ -1,0 +1,800 @@
+* {
+    font-family: Nunito;
+    font-weight: bold;
+}
+
+iframe {
+    border: none;
+    display: block;
+    margin: 3vh auto;
+    width: 50vw;
+    height: 30vw;
+    box-shadow: #000 0 0 calc(2vw + 4vh);
+}
+
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+::selection {
+    background: #000;
+    color: #fff;
+}
+
+
+
+#main::-webkit-scrollbar {
+    width: 0.7vw;
+    height: 0.7vw;
+}
+
+#main::-webkit-scrollbar-thumb {
+    background: #666c;
+    
+}
+
+#main::-webkit-scrollbar-thumb:hover {
+    background: #000;
+}
+
+
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.BG {
+    background: url('../assets/hexagon.jpg') /*fixed*/;
+    background-position: center center;
+}
+
+nav {
+    user-select: none;
+}
+
+.nav-menu {
+    width: 100vw;
+    height: 8vh;
+    background: #07f;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    font-size: calc(0.3vw + 3vh);
+}
+
+.nav-menu__div {
+    display: inline-block;
+    height: 100%;
+    padding: 2vh;
+    margin: 0;
+    
+    color: #fff;
+    background: #0a0;
+    transition: color 0.5s, background 0.5s;
+    border-right: solid 0.2vw #070;
+
+    cursor: pointer;
+    text-align: center;
+    text-transform: UPPERCASE;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.nav-menu__div:hover {
+    color: #000;
+    background: #0f0;
+}
+
+.nav-menu__div:nth-child(1):after {
+    content: 'inicio';
+}
+
+.nav-menu__div:nth-child(2):after {
+    content: 'intro';
+}
+
+.nav-menu__div:nth-child(3):after {
+    content: 'tipos';
+}
+
+.nav-menu__div:nth-child(4):after {
+    content: 'funcionamiento';
+}
+
+.nav-menu__div:nth-child(5):after {
+    content: 'instalación';
+}
+
+.nav-menu__div:nth-child(6):after {
+    content: 'marcas';
+}
+
+.nav-menu__div:nth-child(7):after {
+    content: 'precios';
+}
+
+.buttonMobile { /* Botón para abrir el menu "hamburguesa" */
+    position: absolute;
+    right: 0;
+    border-right: none;
+    border-left: solid 0.2vw #070;
+    display: none;
+}
+
+.buttonMobile svg {
+    width: 28px;
+    height: 28px;
+}
+
+.menuMobile {
+    width: fit-content;
+    position: fixed;
+    right: 0;
+    z-index: -1;
+    visibility: hidden;
+    /*font-size: 6vw;*/
+
+    /**transform: translate(0, -100%);*/
+    /**transition: transform 0.3s;*/
+}
+
+.buttonMobile:hover + .menuMobile {
+    visibility: visible;
+    /**transform: translate(0, 0);*/
+}
+
+.menuMobile__item {
+    width: 100%;
+    padding: 10% 0;
+    color: #fff;
+    background: #0a0;
+    border-top: solid 0.2vw #070;
+    cursor: pointer;
+    transition: 0s 0.1s;
+    text-align: center;
+    text-transform: UPPERCASE;
+    font-weight: bold;
+}
+
+.menuMobile__item:hover {
+    color: #000;
+    background: #0f0;
+}
+
+.menuMobile__item:nth-child(1):after {
+    content: 'intro';
+}
+
+.menuMobile__item:nth-child(2):after {
+    content: 'tipos';
+}
+
+.menuMobile__item:nth-child(3):after {
+    content: 'funcionamiento';
+}
+
+.menuMobile__item:nth-child(4):after {
+    content: 'instalación';
+}
+
+.menuMobile__item:nth-child(5):after {
+    content: 'marcas';
+}
+
+.menuMobile__item:nth-child(6):after {
+    content: 'precios';
+}
+
+section {
+    padding-bottom: 0 !important;
+}
+
+#main {
+    width: 100vw;
+    height: 92vh; /* Proporción correspodiente a "main" respecto de "nav" */
+    margin: 0;
+    
+    /* Posicionar la barra de deslizamiento encima del contenido en lugar de al lado */
+    overflow: overlay;
+    scroll-behavior: smooth;
+}
+
+#inicio {
+    width: 100%;
+    height: 92vh;
+    position: relative;
+    background: url(../assets/hero.webp) fixed;
+    background-size: cover;
+    background-position: top center;
+}
+
+h2 {
+    width: fit-content;
+    margin: 0 auto;
+    user-select: none;
+}
+
+h2.hero {
+    padding: 2vw;
+    position: sticky;
+    top: 10vh;
+    color: #fff;
+    text-align: center;
+    font-size: 10vw;
+    box-shadow: inset #367192 0 0 20vw;
+    border-radius: 3vw;
+    user-select: none;
+    letter-spacing: 1vw;
+}
+
+
+
+#intro {
+    height: fit-content;
+    padding: 5%;
+    padding-top: 0;
+}
+
+h2.title{
+    font-size: calc(4vw + 2vh);
+    padding: 1vw;
+    margin: 10vh auto 0 auto;
+    background: linear-gradient(180deg, #07f, #fff);
+    border: solid 0.5vw #244f5f;
+    border-radius: 2vw;
+}
+
+.content--intro {
+    width: 80%;
+    margin: auto;
+    margin-top: 2vh;
+    padding: 2vw;
+    border: solid 0.3vw #387397;
+    border-radius: 1vw;
+    background: #5cbbcb;
+    box-shadow: inset #fff 0 0 0.7vw;
+    color: #fff;
+    font-size: calc(0.6vw + 2vh);
+}
+
+.content--intro img {
+    width: 30vw;
+    border-radius: 2vw;
+    border: solid 0.2vw #27556d;
+    box-shadow: #555 0.5vw 0.5vw 0.7vw;
+}
+
+.img1 {}
+
+.img2 {
+    margin-left: 2vw;
+}
+
+.content--intro div.text {
+    width: 100%;
+    display: block;
+    margin: 2vh auto;
+    margin-left: 1vw;
+}
+
+.content--intro div.text._1 {
+    display: inline-block;
+    width: 50%;
+}
+
+.content--intro div.text._2 {
+    display: inline-block;
+    float: left;
+    width: 50%;
+}
+
+div.separator {
+    display: block;
+    width: 100%;
+    height: 3vh;
+}
+
+.content--intro div.text ul {
+    padding-inline-start: 3vw;
+}
+
+.content--intro ul li {
+    margin: 2vh 0;
+}
+
+
+
+
+#tipos {
+    height: fit-content;
+}
+
+.content--tipos {
+    height: fit-content;
+    margin-top: 2vh;
+}
+
+.textLine {
+    width: fit-content;
+    margin: 1vh auto;
+    padding: 1vw 1vw;
+    background: #0f0;
+    border: solid 0.25vw #060;
+    font-size: calc(1vw + 2vh);
+    box-shadow: #000 0 0 1vw;
+}
+
+.tipos--box {
+    width: fit-content;
+    margin: 4vh auto 0 auto;
+    user-select: none;
+}
+
+.tipos--box .item {
+    display: inline-block;
+    padding: 3vw;
+    padding-bottom: 1vw;
+    border: solid 0.2vw #035;
+    border-radius: 2vw;
+    background: #07f;
+    position: relative;
+    box-shadow: inset #fff 0 0 0.5vw;
+}
+
+.tipos--box .name {
+    font-size: 2vw;
+    background: #fff;
+    border-radius: 2vw;
+    padding: 1vw;
+    margin: 0.5vh 1vw;
+    position: absolute;
+    top: 0.7vh;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.tipos--box .img {
+    width: 15vw;
+    height: 15vw;
+    margin: 6vh auto 0.5vh auto;
+    border: solid 0.2vw #000;
+    border-radius: 50%;
+}
+
+.tipos--box .img._1 {
+    background: url(../assets/TN.webp);
+    background-size: cover;
+    background-position: center center;
+}
+
+.tipos--box .img._2 {
+    background: url(../assets/VA.webp);
+    background-size: cover;
+    background-position: center center;
+}
+
+.tipos--box .img._3 {
+    background: url(../assets/IPS.webp);
+    background-size: cover;
+    background-position: center center;
+}
+
+.tipos--box .info {
+    margin: 2vh auto;
+    padding: calc(0.5vw + 1vh) calc(2vw + 0.5vh);
+    background: #ff0;
+    border-radius: calc(2vw + 1vh);
+    text-align: center;
+    width: fit-content;
+    font-size: calc(1vw + 3vh);
+    font-weight: 900;
+    cursor: pointer;
+    transition: box-shadow 0.5s,
+                color 0.5s,
+                background 0.5s;
+}
+
+.tipos--box .info:hover {
+    box-shadow: #000 0 0 2vw;
+    color: #fff;
+    background: #f00;
+}
+
+.tipos--box .info:active {
+    box-shadow: #000 0 0 2vw;
+    color: #aaa;
+    background: #600;
+    transition: color 0s,
+                background 0s;
+}
+
+.content--funcionamiento {
+    width: 80%;
+    margin: auto;
+}
+
+img.funcionamiento {
+    display: block;
+    margin: auto;
+    margin-top: 2vw;
+    width: calc(25vw + 20vh);
+    box-shadow: #000 0 0 3vw;
+}
+
+.content--funcionamiento .text {
+    color: #fff;
+    background: #27556d;
+    margin: auto;
+    margin-top: 1vw;
+    width: 80%;
+    padding: 1vw;
+    border: solid 0.2vw #000;
+    border-radius: 2vw;
+    font-size: calc(0.5vw + 2vh);
+}
+
+.content--instalacion .text {
+    color: #fff;
+    background: #5cbaca;
+    margin: auto;
+    margin-top: 3vw;
+    width: 80%;
+    padding: 1vw;
+    border: solid 0.2vw #000;
+    border-radius: 2vw;
+    font-size: calc(1vw + 2vh);
+}
+
+.content--marcas .text {
+    display: block;
+    color: ;
+    width: fit-content;;
+    background: #fff;
+    padding: 1vw;
+    border-radius: 2vw;
+    border: solid #07f 0.5vw;
+    margin: 1vh auto;
+    margin-bottom: 2vw;
+    text-align: center;
+    font-size: calc(1vw + 2vh);
+    box-shadow: #000 0 0 calc(2vw + 2vh);
+}
+
+.content--marcas .box .logo {
+    display: block;
+    padding: 1vw;
+    border-radius: 2vw;
+    background: #92bcc8;
+    box-shadow: #000 0 0 calc(1vw + 1vh);
+    margin-bottom: 2vw;
+    position: relative;
+
+    transition: background 0.5s;
+}
+
+.content--marcas .box .logo:hover {
+    background: #26546d;
+}
+
+.content--marcas .box .logo:hover div {
+    color: #fff;
+}
+
+.content--marcas .box {
+    display: block;
+    margin: auto;
+    width: 50%;
+    background: #fff;
+    padding: 2vw;
+    border-radius: 2vw;
+    border: solid #28566e 0.3vw;
+}
+
+.content--marcas .box .logo div {
+    display: block;
+    width: fit-content;
+    display: inline-block;
+    transition: color 0.5s;
+}
+
+.content--marcas div .img {
+    border-radius: 4vw;
+    width: calc(8vw + 10vh);
+}
+
+.content--marcas .box .logo div {
+    width: 50%;
+    text-decoration: none;
+    color: #000;
+    font-size: calc(1vw + 1.5vh);
+    position: absolute;
+    top: 50%;
+    transform: translate(10px,-50%);
+}
+
+#precios .text1 {
+    text-align: center;
+    font-size: calc(1vw + 2vh);
+    width: fit-content;
+    margin: 2vw auto;
+    padding: 1vw;
+    color: #fff;
+    background: #07fc;
+    border: solid #27556d 0.3vw;
+    border-radius: 1vw;
+}
+
+#precios .box {
+    margin: auto;
+    width: fit-content;
+    position: relative;
+}
+
+#precios .text {
+    display: block;
+    text-align: center;
+    font-size: calc(1vw + 2vh);
+    margin: 3vh auto;
+    width: fit-content;
+    padding: 1vw;
+    background: #ff0b;
+    border-radius: 2vw;
+    box-shadow: inset #fff 0 0 1vw,
+                      #000 0 0 1vw;
+}
+
+.text + .popup {
+    display: block;
+    margin: auto;
+    width: 40vw;
+    padding: 1vw;
+    background: #e0eaec;
+    border-radius: 2vw;
+    border: solid #184b69 0.3vw;
+
+    text-align: center;
+    font-size: calc(1vw + 2vh);
+}
+
+#precios a {
+    text-decoration: none;
+    color: #070;
+    transition: color 0.7s;
+}
+
+#precios a:hover {
+    text-decoration: underline;
+    color: #07f
+}
+
+.collection {
+    margin-top: 1vw;
+    background: #224c60bb;
+    padding: 1vw;
+    border-radius: 1vw;
+}
+
+.collection div {
+    display: inline-block;
+    position: relative;
+    width: fit-content;
+    margin: 2vh auto;
+    padding: 1vw;
+    border-radius: 2vw;
+    background: #b5e4e5;
+}
+
+.collection div:hover img {
+    opacity: 0;
+}
+
+.collection div:hover span {
+    opacity: 1;
+}
+
+.collection img {
+    display: block;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 2vw;
+    opacity: 999;
+    transition: opacity 0.7s;
+}
+
+.collection span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    opacity: 0;
+
+    font-size: calc(3vw + 4.5vh);
+    transition: opacity 0.7s;
+}
+
+.content--precios {
+    margin-bottom: 5vh;
+    user-select: none;
+}
+
+
+footer {
+    display: flex;
+    width: 100%;
+    background: #255169;
+    user-select: none;
+    padding: 1vw 0;
+}
+
+footer span {
+    display: inline-block;
+    margin: auto;
+    padding: 5vw;
+    cursor: pointer;
+    color: #fff;
+    background: ;
+    border-radius: 3vw;
+    transition: color 0.7s, background 0.7s;
+    font-size: calc(2vw + 3vh);
+}
+
+footer span:hover {
+    color: #0f0;
+    background: #3c7c97;
+}
+
+
+.Popup {
+    width: 50%;
+    padding: calc(2vw + 1vh);
+    background: #fff;
+    border-radius: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    font-size: calc(1vw + 2.5vh);
+    text-align: left;
+    transform: scale(0) translate(-50%,-50%);
+    transition: transform 0.7s;
+    transform-origin: left top;
+}
+
+.hide {
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    background: #0007;
+    opacity: 0;
+    transition: opacity 0.7s;
+}
+
+/*************************************************************/
+/*************************************************************/
+/*************************************************************/
+/*************************************************************/
+/*************************************************************/
+
+@media screen and (orientation: portrait) {
+
+    iframe {
+        width: 80vw;
+        height: 60vw;
+    }
+
+    .nav-menu__div:not(.inicio) {
+        display: none;
+    }
+    
+    .nav-menu__div.buttonMobile,
+    .nav-menu__div.menuMobile {
+        display: inline-block;
+    }
+
+    #main::-webkit-scrollbar {
+        width: 1.2vw;
+        height: 1.2vw;
+    }
+
+    div.separator {
+        height: 3vh;
+    }
+    
+    .content--intro {
+        width: 90%;
+        height: 100%;
+        padding: 5vw;
+    }
+
+    .content--intro img {
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5vh;
+    }
+
+    .content--intro div.text._1 {
+        display: block;
+        width: 100%;
+        margin: 3vw 1vh;
+        margin-bottom: 0;
+    }
+
+    .content--intro div.text._2 {
+        width: 100%;
+    }
+
+    .content--intro div.text ul {
+        padding-inline-start: 10vw;
+    }
+
+    .img2 {
+        margin: auto;
+    }
+
+    .tipos--box {
+        width: 100%;
+    }
+
+    .tipos--box .item {
+        display: block;
+        margin: 1vh auto;
+        width: 70%;
+        box-shadow: inset #fff 0 0 3vw;
+    }
+
+    .tipos--box .name {
+        font-size: 3vh;
+    }
+
+    .tipos--box .img {
+        width: 25vw;
+        height: 25vw;
+    }
+
+    .tipos--box .info {
+        width: 80%;
+    }
+
+    .content--funcionamiento .text {
+        width: 100%;
+    }
+
+    .content--marcas .box {
+        width: 70%;
+    }
+
+    .text + .popup {
+        width: 70%
+    }
+
+    .collection {
+        width: 90%;
+        margin: auto;
+        margin-top: 2vh;
+    }
+
+    .collection div {
+        display: block;
+        margin: 1vh auto;
+    }
+
+    .collection img {
+        width:  40vh;
+        height: 40vh;
+        margin: auto;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .Popup {
+        width: 90%;
+    }
+
+}

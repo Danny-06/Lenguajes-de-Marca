@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--Para la mejor experiencia use el navegador Google Chrome-->
+<html lang="es">
+    <head>
+        <title>Monitores TFT</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="index_files/assets/Favicon-f-tech-solutions.png" type="image/png">
+        <link rel="stylesheet" href="index_files/css/style.css">
+        <link rel="stylesheet" href="index_files/css/fonts.css">
+    </head>
+    <body>
+        <nav class="nav-menu">
+            <div onclick="location.href='#inicio';" class="nav-menu__div inicio"></div><div onclick="location.href='#intro';" class="nav-menu__div"></div><div onclick="location.href='#tipos';" class="nav-menu__div"></div><div onclick="location.href='#funcionamiento';" class="nav-menu__div"></div><div onclick="location.href='#instalacion';" class="nav-menu__div"></div><div onclick="location.href='#marcas';" class="nav-menu__div"></div><div onclick="location.href='#precios';" class="nav-menu__div"></div>
+            <div class="nav-menu__div buttonMobile">
+                <svg viewBox="0 0 448 512">
+                    <path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path>
+                </svg>
+            </div>
+            <div class="menuMobile">
+                <div onclick="location.href='#intro';" class="menuMobile__item"></div>
+                <div onclick="location.href='#tipos';" class="menuMobile__item"></div>
+                <div onclick="location.href='#funcionamiento';" class="menuMobile__item"></div>
+                <div onclick="location.href='#instalacion';" class="menuMobile__item"></div>
+                <div onclick="location.href='#marcas';" class="menuMobile__item"></div>
+                <div onclick="location.href='#precios';" class="menuMobile__item"></div>
+            </div>
+        </nav>
+        <!-- 'display: flex' y 'flex-direction: column' para solucionar el problema del 'Margin Collapse' -->
+        <div id="main" style="display: flex;
+                              flex-direction: column;
+        ">
+        <div class="BG">
+
+            <section id="inicio">
+                <h2 class="hero">MONITORES TFT</h2>
+            </section>
+            
+            <section id="intro">
+                <h2 class="title">INTRODUCCIÓN</h2>
+                <div class="content--intro">
+
+                    <img class="img1" src="index_files/assets/fig1.gif">
+                    <div class="text _1">
+                    -El TFT (Thin-Film Transitor) es un transistor especial que se compone de:
+                    <ul>
+                        <li>Película Fina de un Material Semiconductor</li>
+                        <li>una Capa de Material Dieléctrico</li>
+                        <li>unos Contactos Metálicos sobre un sustrato de soporte</li>
+                    </ul>
+                    (El sustrato más común es el vidrio)
+                    </div>
+                    <div class="separator"></div>
+                    <div class="text _2">
+                    -Las pantallas TFT son pantallas de matriz líquida activa, 
+                    donde cada píxel se ilumina de manera independiente y es de las mejores pantallas LCD encolor.
+                    <br><br>
+                    -Se usan para multitud de dispositivos desde móviles, monitores, PC hasta cámaras digitales,
+                    aplicaciones para el hogar, etc.
+                    </div>
+                    <img class="img2" src="index_files/assets/TFT usos.jpg">
+
+                </div>
+            </section>
+
+            <section id="tipos">
+                <h2 class="title">TIPOS</h2>
+                <div class="content--tipos">
+
+                    <div class="textLine">Podemos distinguir entre 3 modelos:</div>
+                    <div class="tipos--box">
+                        <div class="item">
+                            <div class="name">Twisted Neumatic</div>
+                            <div class="img _1"></div>
+                            <div class="info" onclick="Info1()">INFO</div>
+                        </div>
+                        <div class="item">
+                            <div class="name">Vertical Alignment</div>
+                            <div class="img _2"></div>
+                            <div class="info" onclick="Info2()">INFO</div>
+                        </div>
+                        <div class="item">
+                            <div class="name">In-Plane Switching</div>
+                            <div class="img _3"></div>
+                            <div class="info" onclick="Info3()">INFO</div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="funcionamiento">
+                <h2 class="title">FUNCIONAMIENTO</h2>
+                <div class="content--funcionamiento">
+
+                    <img class="funcionamiento" src="index_files/assets/funcionamineto pantalla TFT.gif">
+                    <div class="text">Se envían los datos desde el ordenador hacia los circuitos de la pantalla.</div>
+                    <div class="text">La pantalla tiene un microprocesador que determina la posición de cada uno de los pixeles de la pantalla.</div>
+                    <div class="text">En el momento en el que se determina los píxeles a colorear, las capas de película fina al recibir corriente de los electrodos se activan.</div>
+                    <div class="text">La intensidad de la corriente determina la saturación de los píxeles.</div>
+                    <div class="text">Todo esto ocurre cada vez que se actualiza la imagen.</div>
+
+                </div>
+            </section>
+            <section id="instalacion">
+                <h2 class="title">INSTALACIÓN</h2>
+                <div class="content--instalacion">
+                    
+                    <div class="text">
+                        Podemos seguir este video ilustrativo para conectar nuestro monitor a nuestro ordenador.
+                        <br>
+                        En este proceso lo unico que puede variar es el conector de video a usar.
+                    </div>
+                    <iframe src="https://www.youtube.com/embed/RRV_yGIjzwc" allowfullscreen></iframe>
+                     <div class="text" style="margin-top: 0">
+                        Debemos seguir como es lógico el manual de instrucciones que venga con el monitor.
+                     </div>
+
+                </div>
+            </section>
+            <section id="marcas"></section>
+                <h2 class="title">MARCAS</h2>
+                <div class="content--marcas">
+
+                    <div class="text">
+                        En su mayoría encontramos marcas chinas que son las que mostraremos:
+                    </div>
+                    <div class="box">
+                        <a href="https://es.made-in-china.com/co_wantysz" target="_blank">
+                        <div class="logo">
+                            <img class="img" src="index_files/assets/Logo - Wanty.jpg">
+                            <div>
+                                Shenzhen Wanty Photoelectric Co., Ltd
+                            </div>
+                        </div></a>
+                        
+                        <a href="https://es.made-in-china.com/co_kadismart" target="_blank">
+                        <div class="logo">
+                            <img class="img" src="index_files/assets/Logo - Kadi Smart.png">
+                            <div>
+                                KADI Smart Technology Limited
+                            </div>
+                        </div></a>
+                        
+                        <a href="https://es.made-in-china.com/co_yadaxingye" target="_blank">
+                        <div class="logo">
+                            <img class="img" src="index_files/assets/Logo - Adia.png">
+                            <div>
+                                Shenzhen Yada Xingye Technology Co., Ltd.
+                            </div>
+                        </div></a>
+                        
+                        <a href="https://es.made-in-china.com/co_toponetech2020" target="_blank">
+                        <div class="logo" style="margin-bottom: 0;">
+                            <img class="img" src="index_files/assets/Logo - TopOneTech.png">
+                            <div>
+                                Top One Tech Limited
+                            </div>
+                        </div></a>
+                    </div>
+
+                </div>
+            <section id="precios">
+                <h2 class="title">PRECIOS</h2>
+                <div class="text1">Llegamos al punto final y al más importante:</div>
+                <div class="box">
+                   <div class="text">¿Dónde encontrarlos?</div>
+                   <div class="popup">
+                   Estos monitores al igual que cualquier otro dispositivo 
+                   tecnológico se puede conseguir en cualquier tienda 
+                   o plataforma dedicada a ello, como <a href="https://www.amazon.es" target="_blank">Amazon</a>, <a href="https://www.ebay.es" target="_blank">Ebay</a>…
+                   </div>
+
+                   <div class="text">¿Qué precios hay?</div>
+                   <div class="popup _1">
+                   Aqui os mostramos una selección de los precios que hay:
+                   </div>
+
+                   <div class="content--precios">
+                        
+                        <div class="collection">
+                                <div><img src="index_files/assets/1.jpg">
+                                        <span>68,99€</span>
+                                </div>
+                                <div><img src="index_files/assets/2.jpg">
+                                        <span>79,99€</span>
+                                </div>
+                                <div><img src="index_files/assets/3.jpg">
+                                        <span>134,09€</span>
+                                </div>
+                                <div><img src="index_files/assets/4.jpg">
+                                        <span>119,99€</span>
+                                </div>
+                        </div>
+                                                
+                </div>
+                   
+                   </div>
+                </div>
+            </section>
+            <footer>
+                <span><a>Sobre nosotros</a></span>
+                <span><a>FAQ</a></span>
+                <span><a>Contactenos</a></span>
+                <span><a>Únete</a></span>
+            </footer>
+
+        </div>
+        </div>
+        <div class="hide" onclick="CloseInfo()" style="visibility: hidden"></div>
+        <div class="Popup" style="transform: scale(0) translate(-50%,-50%)"></div>
+        <script src="index_files/js/script.js"></script>
+    </body>
+</html>
