@@ -16,19 +16,22 @@ img {
   user-select: none;
 }
 
+
+
+:root {
+  --MyContainer_Width: 90vw;
+  --MyContainer_Height: 90vh;
+}
+
 body {
   background: url('../assets/BG.jpeg');
   margin: 0;
-  padding: 0;
+  padding: calc( (100vh - var(--MyContainer_Height)) / 2 ) calc( (100vw - var(--MyContainer_Width)) / 2 );
 }
 
 .myContainer {
-  --width: 90vw;
-  --height: 90vh;
-  --margin: calc( (100vh - var(--height)) / 2 ) auto;
-  width:  var(--width);
-  height: var(--height);
-  margin: var(--margin);
+  width:  var(--MyContainer_Width);
+  height: var(--MyContainer_Height);
   --Color: #72d9b5;
   --X_Offset:    0px;
   --Y_Offset:    0px;
