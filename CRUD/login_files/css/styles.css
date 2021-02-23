@@ -25,6 +25,7 @@ img {
 
 body {
   background: url('../assets/BG.jpeg');
+  background-size: cover; 
   margin: 0;
   padding: calc( (100vh - var(--myContainer_Height)) / 2 ) calc( (100vw - var(--myContainer_Width)) / 2 );
 }
