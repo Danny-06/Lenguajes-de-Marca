@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+::selection {
+  background: #fa0;
+  color: #000;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+body {
+  background: url('../assets/BG.jpeg');
+  margin: 0;
+  padding: 0;
+}
+
+.myContainer {
+  --width: 90vw;
+  --height: 90vh;
+  --margin: calc( (100vh - var(--height)) / 2 ) auto;
+  width:  var(--width);
+  height: var(--height);
+  margin: var(--margin);
+  --Color: #72d9b5;
+  --X_Offset:    0px;
+  --Y_Offset:    0px;
+  --Blur:       20px;
+  --Spread:      5px;
+  box-shadow: var(--Color)
+              var(--X_Offset) var(--Y_Offset)
+              var(--Blur)     var(--Spread);
+  background: linear-gradient(90deg,#9e7db0,#eb8080);
+  border: solid calc(0.2vw + 0.4vh) #121537;
+  border-radius: calc(1.2vw + 0.8vh);
+}
+
+img.welcome {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+
+form.form {
+  display: block;
+  width: 30vw;
+  margin: auto;
+  margin-top: 10vh;
+}
+
+/* Placeholder del input */
+input::-webkit-input-placeholder {
+  color: #ddd;
+  transition: opacity 0.3s;
+}
+
+input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+input {
+  display: block;
+  margin: 5% auto;
+  width: 90%;
+  font-size: 30px;
+  height: 10%;
+}
+
+input.user,
+input.password {
+  padding: 0 5%;
+
+  background: #fff2;
+  background:transparent;
+  color: #fff;
+  border: none;
+  border-bottom: solid #00ffcd 4px;
+  border-radius: 10px;
+}
+
+input.user:focus,
+input.password:focus {
+  background: linear-gradient(90deg,#eb8080ff,#af2d9088);
+}
+
+input.submit {
+  width: 60%;
+  margin-top: 5vh;
+
+  cursor: pointer;
+  border-radius: 10px;
+  border: solid 4px #976bab;
+  background: #ca9bbf;
+  color: #fff;
+  box-shadow: #000 0 0 20px 0;
+
+  --t: 0.2s;
+  transition: border-color  var(--t),
+              background    var(--t),
+              color         var(--t),
+              box-shadow    var(--t);
+}
+
+input.submit:hover {
+  border-color: #541e5f;
+  background: #af2d90;
+  color: #000;
+}
+
+input.submit:active {
+  border-color: #291e2b;
+  background: #631650;
+  color: #000;
+  box-shadow: #000 0 0 20px 0,
+        inset #000 0 0 10px 0;
+}
+
+
+
+
+
+
+
+
+/*****************/
+/**Media Queries**/
+/*****************/
+
+
+@media (max-width: 1150px) {
+  form.form {
+    width: 90vw;
+  }
+
+  input {
+    margin: 5% auto;
+    font-size: 30px;
+  }
+}
+
+@media (orientation: portrait) {
+  .myContainer {
+    border-radius: calc(1.2vh + 0.8vw);
+    width: 95vw;
+  }
+
+  img.welcome {
+    width: 95%;
+  }
+
+  form.form {
+    width: 90vw;
+  }
+
+  input {
+    margin: 10% auto;
+    font-size: 30px;
+  }
+}
