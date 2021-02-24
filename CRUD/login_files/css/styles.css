@@ -171,7 +171,7 @@ input.submit:active {
   }
 }
 
-@media (min-aspect-ratio: 160/75) {
+@media (min-aspect-ratio: 160/73) {
   
   form.form {
     width: 70%
