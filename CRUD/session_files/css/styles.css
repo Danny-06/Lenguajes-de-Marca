@@ -99,15 +99,35 @@ nav .user .icon {
 }
 
 :root {
-  --mainContentWidth: 80%;
-  --mainpanelLeftWidth: 20%;
+  /* Ancho de referencia con el panel lateral abierto */
+  --mainContentDefaultWidth: 80%;
+  /* Abreviación de la variable */
+  --mCDW: var(--mainContentDefaultWidth);
+
+  /* Ancho por defecto del contenido
+  que se vuelve dinámico a traves del estilo
+  en linea en el contenedor "main"
+  para ajustarlo a la vez que se
+  posiciona el panel lateral */
+  --mainContentWidth: var(--mCDW);
+
+  /* El ancho del panel lateral es lo que sobra
+  del ancho de contenedor "content" */
+  --mainPanelLeftWidth: calc(100% - var(--mCDW));
 }
 
 .main > .panelLeft {
-  width: var(--mainpanelLeftWidth);
+  width: var(--mainPanelLeftWidth);
   height: 100%;
   position: fixed;
-  left: calc(80% - var(--mainContentWidth));
+
+  /* Posicionamiento dinámico del panel lateral según
+  el espacio que ocupe el contenedor "content" */
+
+  /* (Ancho de Referencia) - (Ancho Dinámico) */
+  /* para dezplazar a la izquierda el menu según aumente
+  el ancho del contenedor "content" */
+  left: calc(var(--mCDW) - var(--mainContentWidth));
   z-index: 999;
 
   background: linear-gradient(0deg,#7b5a90,#bf6985);
