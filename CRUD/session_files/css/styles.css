@@ -116,6 +116,8 @@ nav .user .icon {
   box-shadow: #000
               0px 4px
               var(--Blur) var(--Spread);
+
+  transition: left 0.5s;
 }
 
 /* Caja invisible que proporciona el espacio físico del menu real
