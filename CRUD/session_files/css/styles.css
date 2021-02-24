@@ -24,6 +24,7 @@ body {
   background: linear-gradient(0deg,#b18753,#dc8a8a);
   background-size: cover;
   margin: 0;
+  overflow: hidden;
 }
 
 
@@ -32,12 +33,20 @@ nav.navBar {
   height: 10vh;
   padding: 5px;
 
+  position: fixed;
+
   background: linear-gradient(90deg,#9e7db0,#eb8080);
   --Blur: 5px;
   --Spread: 2px;
   box-shadow: #000
               0px 0px
               var(--Blur) var(--Spread);
+}
+
+nav.navBarFake {
+  width: 100%;
+  height: 10vh;
+  padding: 5px;
 }
 
 nav > * {
@@ -95,7 +104,7 @@ nav .user .icon {
 
 
 .main {
-  height: 90vh;
+  height:;
 }
 
 :root {
@@ -118,7 +127,9 @@ nav .user .icon {
 
 .main > .panelLeft {
   width: var(--mainPanelLeftWidth);
-  height: 100%;
+  height: 90%;
+  padding: 1%;
+  overflow: auto;
   position: fixed;
 
   /* Posicionamiento dinámico del panel lateral según
@@ -129,14 +140,12 @@ nav .user .icon {
   el ancho del contenedor "content" */
   left: calc(var(--mCDW) - var(--mainContentWidth));
   z-index: 999;
-
   background: linear-gradient(0deg,#7b5a90,#bf6985);
   --Blur: 3px;
   --Spread: 2px;
   box-shadow: #000
               0px 4px
               var(--Blur) var(--Spread);
-
   transition: left 0.5s;
 }
 
@@ -144,7 +153,9 @@ nav .user .icon {
 de arriba debido a su posicionamiento 'Fixed' */
 .main .panelLeftFake {
   width: calc(100% - var(--mainContentWidth));
-  height: 100%;
+  /* Altura 0 para que el contenedor "content"
+  no se vaya para abajo */
+  height: 0;
   display: inline-block;
   opacity: 0;
 
@@ -154,8 +165,11 @@ de arriba debido a su posicionamiento 'Fixed' */
 
 .main > .content {
   width: var(--mainContentWidth);
-  height: 100%;
+  height:;
+  max-height: 90vh;
   display: inline-block;
+  padding: 1%;
+  overflow: auto;
 
   transition: width 0.5s;
 }
