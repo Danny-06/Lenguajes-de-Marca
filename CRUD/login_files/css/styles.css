@@ -57,7 +57,7 @@ img.welcome {
 
 form.form {
   display: block;
-  width: 30vw;
+  width: 35vw;
   margin: auto;
   margin-top: 10vh;
 }
@@ -99,6 +99,7 @@ input.password:focus {
 
 input.submit {
   width: 60%;
+  height: 15%;
   margin-top: 5vh;
 
   cursor: pointer;
@@ -150,27 +151,56 @@ input.submit:active {
 
 @media (max-width: 1150px) {
   form.form {
-    width: 90vw;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  img.welcome {
+    width: 60%;
   }
 
   input {
-    margin: 5% auto;
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 5%;
     font-size: 30px;
+  }
+
+  input.submit {
+    height: 12vh;
+  }
+}
+
+@media (min-aspect-ratio: 160/70) {
+  
+  form.form {
+    width: 70%
+  }
+
+  .block {
+    width: 50%;
+    display: inline-block;
+  }
+
+  input.user,
+  input.password {
+    margin-bottom: 10%;
+  }
+
+  input.submit {
+    width: 40%;
+    height: 20%;
+    display: inline-block;
   }
 }
 
 @media (orientation: portrait) {
   .myContainer {
     border-radius: calc(1.2vh + 0.8vw);
-    width: 95vw;
   }
 
   img.welcome {
     width: 95%;
-  }
-
-  form.form {
-    width: 90vw;
   }
 
   input {
