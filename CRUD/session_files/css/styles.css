@@ -100,21 +100,35 @@ nav .user .icon {
 
 :root {
   --mainContentWidth: 80%;
+  --mainpanelLeftWidth: 20%;
 }
 
 .main > .panelLeft {
-  width: calc(100% - var(--mainContentWidth));
+  width: var(--mainpanelLeftWidth);
   height: 100%;
-  display: inline-block;
+  position: fixed;
+  left: calc(80% - var(--mainContentWidth));
+  z-index: 999;
+
   background: linear-gradient(0deg,#7b5a90,#bf6985);
   --Blur: 3px;
   --Spread: 2px;
   box-shadow: #000
               0px 4px
               var(--Blur) var(--Spread);
+}
+
+/* Caja invisible que proporciona el espacio físico del menu real
+de arriba debido a su posicionamiento 'Fixed' */
+.main .panelLeftFake {
+  width: calc(100% - var(--mainContentWidth));
+  height: 100%;
+  display: inline-block;
+  opacity: 0;
 
   transition: width 0.5s;
 }
+
 
 .main > .content {
   width: var(--mainContentWidth);
