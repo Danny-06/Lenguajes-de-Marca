@@ -277,7 +277,7 @@ h2.tipos {
 
 
 section#tutorial {
-  padding: 2%;
+  padding: 4%;
 }
 
 section#tutorial .textContent {
@@ -288,6 +288,7 @@ section#tutorial .textContent {
   display: inline-block;
   float: left;
 
+  font-size: ;
   box-shadow: inset #0f0c38 0 0 20px 0;
   border: solid #928989 2px;
   border-radius: 10px;
@@ -295,13 +296,21 @@ section#tutorial .textContent {
   color: #fff;
 }
 
+section#tutorial span {
+  font-size: 1.3em;
+}
+
 section#tutorial .textContent .title {
-  color:;
+  width: fit-content;
+  margin: auto;
+
+  color: #ff0;
   background: #6786d4;
   border: solid #902b9e 2px;
   border-radius: 5px;
-  padding: 1%;
-  font-size: 1.2em;
+  padding: 2%;
+  font-size: 1.4em;
+  text-align: center;
   margin-bottom: 2%;
 }
 
@@ -406,6 +415,12 @@ h2.registro {
 
   .formulario {
     width:95%;
+  }
+
+  section#tutorial .textContent {
+    display: block;
+    width: 100%;
+    margin: auto;
   }
 
 }
