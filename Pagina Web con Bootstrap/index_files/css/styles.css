@@ -250,9 +250,51 @@ h2.tipos {
   padding: 2%;
 
   background: linear-gradient(90deg,#9C27B0,#2196F3);
+  color: #eee;
+}
+
+
+#accordionExample .card {
+  background: #744ea2;
+  color: #eee;
+}
+
+#accordionExample button {
+  color: #fff;
+}
+
+#accordionExample h2 {
+  background: #845ab9;
   color: #ccc;
 }
 
+
+
+
+
+section#registro {
+  padding: 1%;
+
+  background: #481b4a;
+}
+
+.googleMaps {
+  box-shadow: #fff 0 0 10px 0;;
+}
+
+.formulario {
+  width: 70%;
+  margin: auto;
+  padding: 2%;
+
+  border-radius: 10px;
+  background: #7c33d6;
+  color: #fff;
+}
+
+.form-text {
+  color: #eee !important;
+}
 
 
 
@@ -285,6 +327,10 @@ h2.tipos {
 
   #carousel {
     width: 100%;
+  }
+
+  .formulario {
+    width:95%;
   }
 
 }
