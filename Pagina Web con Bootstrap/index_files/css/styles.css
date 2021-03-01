@@ -94,7 +94,7 @@ nav {
 }
 
 .nav-menu__div:nth-child(4):not(.buttonMobile):after {
-  content: 'funcionamiento';
+  content: 'tutorial';
   align-items: center;
 }
 
@@ -154,7 +154,7 @@ nav {
 }
 
 .menuMobile__item:nth-child(3):after {
-  content: 'funcionamiento';
+  content: 'tutorial';
 }
 
 .menuMobile__item:nth-child(4):after {
@@ -242,6 +242,14 @@ h2.tipos {
   border: dashed #000 4px;
 }
 
+#carousel .carousel-item {
+  height: 100%;
+}
+
+#carousel img {
+  height: 100%;
+}
+
 .jumbotron {
   width: 100%;
   margin: auto;
@@ -267,10 +275,42 @@ h2.tipos {
 }
 
 
-#section {
 
+section#tutorial {
+  padding: 2%;
 }
 
+section#tutorial .textContent {
+  width: 40%;
+  height: 100%;
+  padding: 2%;
+  margin: 2%;
+  display: inline-block;
+  float: left;
+
+  box-shadow: inset #0f0c38 0 0 20px 0;
+  border: solid #928989 2px;
+  border-radius: 10px;
+  background: #39768a;
+  color: #fff;
+}
+
+section#tutorial .textContent .title {
+  color:;
+  background: #6786d4;
+  border: solid #902b9e 2px;
+  border-radius: 5px;
+  padding: 1%;
+  font-size: 1.2em;
+  margin-bottom: 2%;
+}
+
+
+iframe.YT {
+  display: inline-block;
+
+  box-shadow: #fff 0 0 20px 0;
+}
 
 section#registro {
   padding: 1%;
@@ -313,7 +353,23 @@ h2.registro {
 
 
 .footer {
-  height: 40vh;
+  padding: 2%;
+  font-size: 1.2rem;
+
+  background: #170721;
+}
+
+.footer .item {
+  color: #6592c3;
+}
+
+.footer .item > span {
+  color: #fff;
+}
+
+.footer img {
+  width: 48px;
+  aspect-ratio: 1/1;
 }
 
 
@@ -356,8 +412,8 @@ h2.registro {
 
 
 ::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
+    width: 15px;
+    height: 15px;
     background: #000;
     box-shadow: inset #fff7 0 0 4px 0;
     border: solid 1px #222;
