@@ -76,7 +76,7 @@ nav {
 .menuMobile__item:hover,
 .menuMobile__item:active {
   color: #000;
-  background: #fff9;
+  background: #fff;
 }
 
 .nav-menu__div:nth-child(1):not(.buttonMobile):after {
