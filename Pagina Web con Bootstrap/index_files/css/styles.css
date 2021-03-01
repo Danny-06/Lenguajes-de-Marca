@@ -339,13 +339,12 @@ h2.registro {
   margin: auto;
   text-transform: uppercase;
   user-select: none;
-
   border-radius: 10px;
   box-shadow: inset #3d0582 0 0 10px 2px,
                       #000 0 0 10px 0;
-  ;
   background: #9f8ac3;
   color: #fff;
+  text-align: center;
 }
 
 .googleMaps {
