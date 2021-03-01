@@ -125,10 +125,16 @@ nav {
   top: 8%;
   z-index: -1;
   visibility: hidden;
+
+  /* Desaparición del menu con retraso */
+  transition: visibility 0s 0.2s;
 }
 
 .buttonMobile:focus + .menuMobile {
   visibility: visible;
+
+  /* Aparición instantanea del menu */
+  transition: visibility 0s 0s;
 }
 
 
