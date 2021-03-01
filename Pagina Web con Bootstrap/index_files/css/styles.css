@@ -99,7 +99,7 @@ nav {
 }
 
 .nav-menu__div:nth-child(5):not(.buttonMobile):after {
-  content: 'instalación';
+  content: 'registro';
 }
 
 .nav-menu__div:nth-child(6):not(.buttonMobile):after {
@@ -110,8 +110,6 @@ nav {
   /* Botón para abrir el menu "hamburguesa" */
   height: 106%;
   float: right;
-  /* border-right: none; */
-  /* border-left: solid 0.2vw #333; */
   display: none;
 }
 
@@ -160,7 +158,7 @@ nav {
 }
 
 .menuMobile__item:nth-child(4):after {
-  content: 'instalación';
+  content: 'registro';
 }
 
 
@@ -269,13 +267,30 @@ h2.tipos {
 }
 
 
+#section {
 
+}
 
 
 section#registro {
   padding: 1%;
 
   background: #481b4a;
+}
+
+h2.registro {
+  width: fit-content;
+  padding: 1%;
+  margin: auto;
+  text-transform: uppercase;
+  user-select: none;
+
+  border-radius: 10px;
+  box-shadow: inset #3d0582 0 0 10px 2px,
+                      #000 0 0 10px 0;
+  ;
+  background: #9f8ac3;
+  color: #fff;
 }
 
 .googleMaps {
@@ -297,6 +312,10 @@ section#registro {
 }
 
 
+.footer {
+  height: 40vh;
+}
+
 
 /*************************************************************/
 /*************************************************************/
@@ -307,7 +326,7 @@ section#registro {
 
 @media (orientation: portrait) {
   iframe {
-    width: 80vw;
+    width: 90vw;
     height: 60vw;
   }
 
