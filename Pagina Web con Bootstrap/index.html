@@ -284,6 +284,19 @@
        <script src="index_files/Frameworks/JQuery/jquery-3.5.1.min.js"></script>
        <script src="index_files/Frameworks/Popper/popper.min.js"></script>
        <script src="index_files/Frameworks/Bootstrap/bootstrap.min.js"></script>
+       <script>
+	let h1 = document.querySelector('h1');
+	let toggle = 0;
+	function FullScreen() {
+	  if(!toogle) {
+	     document.body.requestFullscreen();
+	     toggle = 1;
+	  } else {
+	     document.exitFullscreen();
+	     toggle = 0;
+	  }
+	}
+       </script>
 <!-- 	   <script src="index_files/js/scripts.js"></script> -->
    </body>
 </html>
