@@ -287,6 +287,8 @@
        <script>
 	let h1 = document.querySelector('h1');
 	let toggle = 0;
+
+        h1.addEventListener("click", FullScreen);
 	function FullScreen() {
 	  if(!toogle) {
 	     document.body.requestFullscreen();
@@ -295,7 +297,6 @@
 	     document.exitFullscreen();
 	     toggle = 0;
 	  }
-	}
        </script>
 <!-- 	   <script src="index_files/js/scripts.js"></script> -->
    </body>
