@@ -101,6 +101,7 @@ input.password:focus {
 input.submit {
   width: 60%;
   height: 15%;
+  min-height: 50px;
   margin-top: 5vh;
 
   cursor: pointer;
@@ -198,7 +199,7 @@ input.submit:active {
 @media (orientation: portrait) {
   .myContainer {
     border-radius: calc(1.2vh + 0.8vw);
-    height: calc(var(--myContainer_Height) - 10vh);
+    height: calc(var(--myContainer_Height) - 5vh);
   }
 
   img.welcome {
