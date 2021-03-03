@@ -33,6 +33,7 @@ body {
 .myContainer {
   width:  var(--myContainer_Width);
   height: var(--myContainer_Height);
+  min-height: 400px;
   --Color: #72d9b5;
   --X_Offset:    0px;
   --Y_Offset:    0px;
