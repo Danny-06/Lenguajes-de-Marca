@@ -33,7 +33,7 @@ body {
 .myContainer {
   width:  var(--myContainer_Width);
   height: var(--myContainer_Height);
-  min-height: 400px;
+  min-height: 350px;
   --Color: #72d9b5;
   --X_Offset:    0px;
   --Y_Offset:    0px;
@@ -198,6 +198,7 @@ input.submit:active {
 @media (orientation: portrait) {
   .myContainer {
     border-radius: calc(1.2vh + 0.8vw);
+    height: calc(var(--myContainer_Height) - 10vh);
   }
 
   img.welcome {
