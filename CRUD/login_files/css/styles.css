@@ -197,6 +197,10 @@ input.submit:active {
 }
 
 @media (orientation: portrait) {
+  body {
+    padding-top: 3%;
+  }
+
   .myContainer {
     border-radius: calc(1.2vh + 0.8vw);
     height: calc(var(--myContainer_Height) - 5vh);
