@@ -92,12 +92,14 @@ nav .user .name {
   margin-right: 10px;
 
   color: #fff;
+  cursor: pointer;
 }
 
 nav .user .icon {
   width: 8vh;
   height: 8vh;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 
