@@ -176,6 +176,7 @@ de arriba debido a su posicionamiento 'Fixed' */
 
   user-select: none;
   cursor: pointer;
+  font-weight: bold;
 
   transition:  box-shadow 0.5s,
                color 0.5s,
