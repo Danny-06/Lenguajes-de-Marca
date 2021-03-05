@@ -177,6 +177,7 @@ de arriba debido a su posicionamiento 'Fixed' */
   user-select: none;
   cursor: pointer;
   font-weight: bold;
+  text-transform: uppercase;
 
   transition:  box-shadow 0.5s,
                color 0.5s,
@@ -192,7 +193,9 @@ de arriba debido a su posicionamiento 'Fixed' */
 
 .itemPanel:active {
   background: linear-gradient(-90deg,#7d7c29,#396523);
-  box-shadow: #000 0 0 20px 5px;
+  box-shadow: #000 0 0 20px 5px,
+              inset #fff 0 0 10px 0
+  ;
   color: #000;
   text-shadow: 0 0 10px #fff,
                0 0 10px #fff,
@@ -203,7 +206,6 @@ de arriba debido a su posicionamiento 'Fixed' */
 
 .main > .content {
   width: var(--mainContentWidth);
-  height:;
   max-height: 90vh;
   display: inline-block;
   padding: 1%;
