@@ -211,5 +211,11 @@ de arriba debido a su posicionamiento 'Fixed' */
   padding: 1%;
   overflow: auto;
 
-  transition: width 0.5s;
+  transition: width 0.5s,
+              filter 0.5s
+  ;
+}
+
+.panelLeft:hover ~ .content {
+  filter: blur(3px);
 }
