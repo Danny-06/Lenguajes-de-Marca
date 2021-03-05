@@ -1,5 +1,5 @@
 /* Botón de la izquierda de la barra de navegación con el logo */
-let home = document.querySelector('.home');
+let home = document.querySelector('.home').parentElement;
 
 /* Contenedor Principal */
 let main = document.querySelector('.main');
@@ -14,7 +14,7 @@ function sidePanel() {
     toggle++;
   } else {
     /* Disminuir el tamaño del contenedor que contiene el contenido de la página y mostrar el panel lateral */
-    main.style = '--mainContentWidth:';
+    main.setAttribute('style', '--mainContentWidth:;');
     toggle--;
   }
 }
