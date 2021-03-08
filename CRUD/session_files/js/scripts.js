@@ -7,6 +7,15 @@ let main = document.querySelector('.main');
 home.addEventListener("click", sidePanel);
 
 let toggle = 0;
+
+// Si es un usuario de movil,
+// ocultar el panel lateral y
+// ajustar variable de la palanca
+if(navigator.userAgent.includes("Mobile")) {
+  main.setAttribute('style', '--mainContentWidth: 100%;')
+  toggle++;
+}
+
 function sidePanel() {
   if(toggle == 0) {
     /* Aumentar el tamaño del contenedor que contiene el contenido de la página y ocultar el panel lateral */
