@@ -211,6 +211,40 @@ de arriba debido a su posicionamiento 'Fixed' */
   ;
 }
 
+
+.LIC {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.CIL {
+  width: 22%;
+  aspect-ratio: 16/9;
+  margin: 1.5%;
+  padding: 0.5%;
+
+  --radius: calc(1vw + 1vh);
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  background: #000;
+  box-shadow: #fff 0 0 10px 0;
+
+  overflow: hidden;
+}
+
+.CIL .thumbnail {
+  width: 100%;
+  height: 100%;
+
+  --radius: calc(1vw + 1vh);
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+
+  object-fit: cover;
+}
+
 .panelLeft:hover ~ .content {
   filter: blur(3px);
 }
@@ -234,6 +268,10 @@ de arriba debido a su posicionamiento 'Fixed' */
     left: calc( /* Conversión que hace que se le reste al 'left' del 'Panel Lateral' 90% en lugar de '20%' que es el valor para la versión de Escritorio */
       ( var(--mCDW) - var(--mainContentWidth) ) * ( var(--mPWNumber) / (100 - var(--mCDWNumber)) )
     ) !important;
+  }
+
+  .CIL {
+    width: 47%;
   }
 
 }
