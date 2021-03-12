@@ -4,3 +4,6 @@ https://danny-06.github.io/Lenguajes-de-Marca/CRUD/login.html
 # Página de Session
 https://danny-06.github.io/Lenguajes-de-Marca/CRUD/session.html
 
+# Página de Table
+https://danny-06.github.io/Lenguajes-de-Marca/CRUD/table.html
+
