@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+*:focus {
+  outline: none;
+}
+
+::selection {
+  background: #fa08;
+  color: #000;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+
+
+
+body {
+  background: linear-gradient(0deg,#b18753,#dc8a8a);
+  background-size: cover;
+  margin: 0;
+}
+
+.main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+
+/* Tabla */
+
+.table :is(.thead .row, .tbody .row) {
+  width: fit-content;
+  display: grid;
+  grid-template-rows: 50px;
+  grid-template-columns: 150px 150px 150px 150px;
+}
+
+.table .tbody {
+  max-height: 300px;
+  overflow: auto;
+}
+
+.table .thead .row {
+  background: #4da53a;
+}
+
+.table .tbody .row:nth-child(even) {
+  background: #bb5757;
+}
+
+.table .tbody .row:nth-child(odd) {
+  background: #824b4b;
+}
+
+.table .col {
+  border: solid #000 2px;
+}
