@@ -45,6 +45,7 @@ body {
   border: solid #000 2px;
   width: fit-content;
   margin: auto;
+  box-shadow: #000 0 0 10px 0;
 }
 
 .table .tbody {
@@ -52,9 +53,6 @@ body {
   overflow: auto;
 }
 
-.table :is(.thead, .tbody) {
-/*   min-width: fit-content; */
-}
 
 .table :is(.thead .row, .tbody .row) {
   width: fit-content;
@@ -116,12 +114,12 @@ img.opt:active {
 
 .space {
   display: inline-block;
-  width: 1vw
+  width: 1vw;
 }
 
 
 
-
+/*************************/
 
 nav.navBar {
   width: 100%;
@@ -237,6 +235,12 @@ nav .user .icon {
               width 0.5s;
   user-select: none;
 }
+
+
+.panelLeft:hover ~ .content {
+  filter: blur(3px);
+}
+
 
 /* Caja invisible que proporciona el espacio físico del menu real
 de arriba debido a su posicionamiento 'Fixed' */
