@@ -25,21 +25,19 @@ body {
 }
 
 body {
+  background: linear-gradient(0deg,#b18753,#dc8a8a);
   background-size: cover;
   margin: 0;
+  overflow: hidden;
 }
-
-.main {
-  height: 100%;
-  background: linear-gradient(0deg,#b18753,#dc8a8a);
-  overflow: auto;
-}
-
 
 /* Tabla */
 
 
 .tableContainer {
+  width: fit-content;
+  margin: auto;
+  padding: 0 5%;
   padding-top: 15vh;
 }
 
@@ -87,6 +85,11 @@ body {
   color: #fff;
 }
 
+.table .col:nth-child(1) {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
 img.opt {
   width: 15% !important;
   cursor: pointer;
@@ -116,3 +119,217 @@ img.opt:active {
   width: 1vw
 }
 
+
+
+
+
+nav.navBar {
+  width: 100%;
+  height: 10vh;
+  padding: 5px;
+  background: linear-gradient(90deg,#9e7db0,#eb8080);
+  --Blur: 5px;
+  --Spread: 2px;
+  box-shadow: #000
+              0px 0px
+              var(--Blur) var(--Spread);
+  user-select: none;
+}
+
+
+nav > * {
+  display: inline-block;
+}
+
+nav .left {
+  padding: 0.3vh 2vh;
+  border-radius: 10px;
+  border: solid transparent 0.4vh;
+  cursor: pointer;
+  --t: 0.5s;
+  transition: background var(--t),
+              border     var(--t);
+  height: 100%;
+}
+
+nav .left:hover {
+  background: #e07474;
+  border: solid #333 0.4vh;
+}
+
+nav .home {
+  height: 100%;
+}
+
+nav .right {
+  float: right;
+  height: 100%;
+}
+
+nav .user {
+  width: fit-content;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Alineamiento Vertical */
+}
+
+nav .user .name {
+  margin-right: 10px;
+
+  color: #fff;
+  cursor: pointer;
+}
+
+nav .user .icon {
+  width: 8vh;
+  height: 8vh;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+
+
+
+
+:root {
+  /* Ancho de referencia con el panel lateral abierto */
+  --mainContentDefaultWidth: 80%;
+  /* Abreviación de la variable */
+  --mCDW: var(--mainContentDefaultWidth);
+  --mCDWNumber: 80;
+
+  /* Ancho por defecto del contenido
+  que se vuelve dinÃ¡mico a traves del estilo
+  en linea en el contenedor "main"
+  para ajustarlo a la vez que se
+  posiciona el panel lateral */
+  --mainContentWidth: var(--mCDW);
+
+  /* El ancho del panel lateral es lo que sobra
+  del ancho de contenedor "content" */
+  --mainPanelLeftWidth: calc(100% - var(--mCDW));
+}
+
+.main > .panelLeft {
+  width: var(--mainPanelLeftWidth);
+  height: 90%;
+  overflow: auto;
+  position: fixed;
+
+  /* Posicionamiento dinÃ¡mico del panel lateral según
+  el espacio que ocupe el contenedor "content" */
+
+  /* (Ancho de Referencia) - (Ancho Dinámico) */
+  /* para dezplazar a la izquierda el menu según aumente
+  el ancho del contenedor "content" */
+  left: calc(var(--mCDW) - var(--mainContentWidth));
+  z-index: 999;
+  background: linear-gradient(0deg,#7b5a90,#bf6985);
+  --Blur: 3px;
+  --Spread: 2px;
+  box-shadow: #000
+              0px 4px
+              var(--Blur) var(--Spread);
+  transition: left 0.5s,
+              width 0.5s;
+  user-select: none;
+}
+
+/* Caja invisible que proporciona el espacio físico del menu real
+de arriba debido a su posicionamiento 'Fixed' */
+.main > .panelLeftFake {
+  width: calc(100% - var(--mainContentWidth));
+  /* Altura 0 para que el contenedor "content"
+  no se vaya para abajo */
+  height: 0;
+  display: inline-block;
+  opacity: 0;
+  transition: width 0.5s;
+}
+
+.itemPanel {
+  width: 90%;
+  text-align: center;
+  margin: 2vh auto;
+  padding: 1rem 1vh;
+
+  background: linear-gradient(90deg,#31b3e0,#b400ff);
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: #0009 0 0 5px 0;
+
+  user-select: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  transition:  box-shadow 0.2s,
+               color 0.2s,
+               text-shadow 0.2s
+  ;
+}
+
+.itemPanel:hover {
+  background: linear-gradient(-90deg,#e0dc31,#56ff00);
+  box-shadow: #000 0 0 20px 5px;
+  color: #000;
+}
+
+.itemPanel:active {
+  background: linear-gradient(-90deg,#7d7c29,#396523);
+  box-shadow: #000 0 0 20px 5px,
+              inset #fff 0 0 10px 0
+  ;
+  color: #000;
+  text-shadow: 0 0 10px #fff,
+               0 0 10px #fff,
+               0 0 10px #fff
+  ;
+}
+
+
+.main > .content {
+  width: var(--mainContentWidth);
+  max-height: 90vh;
+  display: inline-block;
+  padding: 1%;
+  overflow: auto;
+
+  transition: width 0.5s,
+              filter 0.5s
+  ;
+}
+
+
+
+
+/* Adaptación del Panel Lateral en movil */
+@media (orientation: portrait),
+       (max-width: 1050px) {
+
+  .main > .content {
+    width: 100% !important;
+  }
+
+  .main > .panelLeft {
+    --mobilePanelWidth: 90%;
+    --mPWNumber: 90;
+    width: var(--mobilePanelWidth) !important;
+
+    left: calc( /* Conversión que hace que se le reste al 'left' del 'Panel Lateral' 90% en lugar de '20%' que es el valor para la versión de Escritorio */
+      ( var(--mCDW) - var(--mainContentWidth) ) * ( var(--mPWNumber) / (100 - var(--mCDWNumber)) )
+    ) !important;
+  }
+
+  .main > .panelLeftFake {
+    width: 0 !important;
+  }
+
+  .CIL {
+    width: 47%;
+  }
+
+}

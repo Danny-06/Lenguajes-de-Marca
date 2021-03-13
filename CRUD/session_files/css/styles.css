@@ -271,6 +271,10 @@ de arriba debido a su posicionamiento 'Fixed' */
     ) !important;
   }
 
+  .main > .panelLeftFake {
+    width: 0 !important;
+  }
+
   .CIL {
     width: 47%;
   }
