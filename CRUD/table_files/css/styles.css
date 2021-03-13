@@ -49,35 +49,70 @@ body {
   margin: auto;
 }
 
-.table :is(.thead .row, .tbody .row) {
-  width: fit-content;
-  min-width:;
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: repeat(6, 10vw);
-}
-
-
 .table .tbody {
   max-height: 300px;
   overflow: auto;
 }
 
+.table :is(.thead, .tbody) {
+/*   min-width: fit-content; */
+}
+
+.table :is(.thead .row, .tbody .row) {
+  width: fit-content;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(6, 136px);
+}
+
+
 .table .thead .row {
-  background: #4da53a;
+  background: #3a85a5;
+}
+
+
+.table .tbody .row:nth-child(odd) {
+  background: #48a751;
 }
 
 .table .tbody .row:nth-child(even) {
-  background: #bb5757;
+  background: #328c24;
 }
 
-.table .tbody .row:nth-child(odd) {
-  background: #824b4b;
-}
 
 .table .col {
   border: solid #000 2px;
   text-align: center;
   padding: 5%;
-  min-width: fit-content;
+  color: #fff;
 }
+
+img.opt {
+  width: 15% !important;
+  cursor: pointer;
+  border-radius: 50%;
+
+  transition: filter 0.3s;
+}
+
+img.opt:hover {
+  --dropHover: drop-shadow(0 0 1.5vh #fff);
+  filter: var(--dropHover)
+          var(--dropHover)
+          var(--dropHover)
+  ;
+}
+
+img.opt:active {
+  --dropActive: drop-shadow(0 0 1.5vh #000);
+  filter: var(--dropActive)
+          var(--dropActive)
+          var(--dropActive)
+  ;
+}
+
+.space {
+  display: inline-block;
+  width: 1vw
+}
+
