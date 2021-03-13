@@ -16,7 +16,10 @@ img {
   user-select: none;
 }
 
-
+html,
+body {
+  height: 100%;
+}
 
 :root {
   --myContainer_Width: 90vw;
@@ -63,6 +66,12 @@ form.form {
   margin-top: 10vh;
 }
 
+
+.block {
+  height: 24vh;
+  min-height: 100px;
+}
+
 /* Placeholder del input */
 input::-webkit-input-placeholder {
   color: #ddd;
@@ -78,14 +87,13 @@ input {
   margin: 5% auto;
   width: 90%;
   font-size: 30px;
-  height: 10%;
+  height: 40%;
 }
 
 input.user,
 input.password {
   padding: 0 5%;
 
-  background: #fff2;
   background:transparent;
   color: #fff;
   border: none;
@@ -100,17 +108,15 @@ input.password:focus {
 
 input.submit {
   width: 60%;
-  height: 15%;
-  min-height: 50px;
-  margin-top: 5vh;
-
+  height: 13vh;
+  min-height: 80px;
+  margin-top: 8vh;
   cursor: pointer;
   border-radius: 10px;
   border: solid 4px #976bab;
   background: #ca9bbf;
   color: #fff;
   box-shadow: #000 0 0 20px 0;
-
   --t: 0.5s;
   transition: border-color  var(--t),
               background    var(--t),
@@ -168,9 +174,6 @@ input.submit:active {
     font-size: 30px;
   }
 
-  input.submit {
-    height: 12vh;
-  }
 }
 
 @media (min-aspect-ratio: 160/73) {

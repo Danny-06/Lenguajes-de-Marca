@@ -8,7 +8,7 @@
 }
 
 ::selection {
-  background: #ffaa0087;
+  background: #fa08;
   color: #000;
 }
 
@@ -56,6 +56,7 @@ nav .left {
   --t: 0.5s;
   transition: background var(--t),
               border     var(--t);
+  height: 100%;
 }
 
 nav .left:hover {
@@ -64,7 +65,7 @@ nav .left:hover {
 }
 
 nav .home {
-  height: 85%;
+  height: 100%;
 }
 
 nav .right {
