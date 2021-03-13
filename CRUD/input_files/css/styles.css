@@ -44,7 +44,7 @@ body {
   border-radius: 10px;
   padding: 3vh;
   border: solid;
-/*   overflow: auto; */
+  overflow: auto;
 
   position: absolute;
   top:0;
@@ -87,21 +87,22 @@ input:is([type="text"], [type="number"]):focus {
 }
 
 input[type="submit"] {
-  background: #f70;
+  background: #c56e22;
   width: 50%;
   cursor: pointer;
   margin: auto;
   margin-top: 3%;
+  box-shadow: #000 0 0 5px 0;
   transition: 0.5s
 }
 
 input[type="submit"]:hover {
-  background: #ff9d46;
+  background: #ff4b00;
   box-shadow: #000 0 0 15px 0;
 }
 
 input[type="submit"]:active {
-  background: #463d35;
+  background: #f00;
   box-shadow: #000 0 0 30px 5px;
 }
 
