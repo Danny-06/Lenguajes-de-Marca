@@ -38,7 +38,7 @@ body {
   width: fit-content;
   margin: auto;
   padding: 0 5%;
-  padding-top: 15vh;
+  padding-top: 6vh;
 }
 
 .table {
@@ -83,7 +83,7 @@ body {
   color: #fff;
 }
 
-.table .col:nth-child(1) {
+.table .tbody .col:nth-child(1) {
   -webkit-user-drag: none;
   user-select: none;
 }
@@ -195,12 +195,12 @@ nav .user .icon {
 :root {
   /* Ancho de referencia con el panel lateral abierto */
   --mainContentDefaultWidth: 80%;
-  /* Abreviación de la variable */
+  /* AbreviaciÃ³n de la variable */
   --mCDW: var(--mainContentDefaultWidth);
   --mCDWNumber: 80;
 
   /* Ancho por defecto del contenido
-  que se vuelve dinÃ¡mico a traves del estilo
+  que se vuelve dinÃƒÂ¡mico a traves del estilo
   en linea en el contenedor "main"
   para ajustarlo a la vez que se
   posiciona el panel lateral */
@@ -217,11 +217,11 @@ nav .user .icon {
   overflow: auto;
   position: fixed;
 
-  /* Posicionamiento dinÃ¡mico del panel lateral según
+  /* Posicionamiento dinÃƒÂ¡mico del panel lateral segÃºn
   el espacio que ocupe el contenedor "content" */
 
-  /* (Ancho de Referencia) - (Ancho Dinámico) */
-  /* para dezplazar a la izquierda el menu según aumente
+  /* (Ancho de Referencia) - (Ancho DinÃ¡mico) */
+  /* para dezplazar a la izquierda el menu segÃºn aumente
   el ancho del contenedor "content" */
   left: calc(var(--mCDW) - var(--mainContentWidth));
   z-index: 999;
@@ -242,7 +242,7 @@ nav .user .icon {
 }
 
 
-/* Caja invisible que proporciona el espacio físico del menu real
+/* Caja invisible que proporciona el espacio fÃ­sico del menu real
 de arriba debido a su posicionamiento 'Fixed' */
 .main > .panelLeftFake {
   width: calc(100% - var(--mainContentWidth));
@@ -301,16 +301,14 @@ de arriba debido a su posicionamiento 'Fixed' */
   display: inline-block;
   padding: 1%;
   overflow: auto;
-
   transition: width 0.5s,
-              filter 0.5s
-  ;
+              filter 0.5s;
 }
 
 
 
 
-/* Adaptación del Panel Lateral en movil */
+/* AdaptaciÃ³n del Panel Lateral en movil */
 @media (orientation: portrait),
        (max-width: 1050px) {
 
@@ -323,7 +321,7 @@ de arriba debido a su posicionamiento 'Fixed' */
     --mPWNumber: 90;
     width: var(--mobilePanelWidth) !important;
 
-    left: calc( /* Conversión que hace que se le reste al 'left' del 'Panel Lateral' 90% en lugar de '20%' que es el valor para la versión de Escritorio */
+    left: calc( /* ConversiÃ³n que hace que se le reste al 'left' del 'Panel Lateral' 90% en lugar de '20%' que es el valor para la versiÃ³n de Escritorio */
       ( var(--mCDW) - var(--mainContentWidth) ) * ( var(--mPWNumber) / (100 - var(--mCDWNumber)) )
     ) !important;
   }
