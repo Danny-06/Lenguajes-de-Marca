@@ -83,6 +83,21 @@ body {
   color: #fff;
 }
 
+.table .thead .row .col:nth-child(1) {
+  background: #222;
+  box-shadow: inset #fff 0 0 2px 0;
+}
+
+/* Columna Opciones */
+.table .tbody .row:nth-child(odd) .col:nth-child(1) {
+  background: #777;
+}
+
+.table .tbody .row:nth-child(even) .col:nth-child(1) {
+  background: #555;
+}
+
+
 .table .tbody .col:nth-child(1) {
   -webkit-user-drag: none;
   user-select: none;
