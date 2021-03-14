@@ -12,3 +12,6 @@ https://danny-06.github.io/Lenguajes-de-Marca/CRUD/input.html
 
 # Página de Modify
 https://danny-06.github.io/Lenguajes-de-Marca/CRUD/modify.html
+
+# Página de Delete
+https://danny-06.github.io/Lenguajes-de-Marca/CRUD/delete.html
