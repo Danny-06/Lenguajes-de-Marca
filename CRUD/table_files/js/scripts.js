@@ -21,7 +21,7 @@ let toggle = 0;
 // Si es un usuario de movil,
 // ocultar el panel lateral y
 // ajustar variable de la palanca
-if(navigator.userAgent.includes("Mobile")) {
+if(navigator.userAgent.includes("Mobile") || window.innerWidth <= 1050) {
   main.setAttribute('style', '--mainContentWidth: 100%;')
   toggle++;
 }
