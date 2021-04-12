@@ -29,6 +29,8 @@ body {
 
 
 nav.navBar {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   height: 10vh;
   padding: 5px;
@@ -69,7 +71,7 @@ nav .home {
 }
 
 nav .right {
-  float: right;
+/*   float: right; */
   height: 100%;
 }
 
