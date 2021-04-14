@@ -263,11 +263,11 @@ de arriba debido a su posicionamiento 'Fixed' */
   }
 
   .main > .panelLeft {
-    --mobilePanelWidth: 90%;
-    width: var(--mobilePanelWidth) !important;
+    --mobilePanelWidth: 90;
+    width: calc(var(--mobilePanelWidth) * 1%) !important;
 
     left: calc( /* Conversión que hace que se le reste al 'left' del 'Panel Lateral' 90% en lugar de '20%' que es el valor para la versión de Escritorio */
-      ( var(--mCDW) - var(--mainContentWidth) ) * ( var(--mobilePanelWidth * 1%) / (100 - var(--mainContentWidth * 1%)) )
+      ( var(--mCDW) - var(--mainContentWidth) ) * ( var(--mobilePanelWidth) / (100 - var(--mobilePanelWidth)) )
     ) !important;
   }
 
