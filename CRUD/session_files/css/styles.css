@@ -108,7 +108,6 @@ nav .user .icon {
   --mainContentDefaultWidth: 80%;
   /* Abreviación de la variable */
   --mCDW: var(--mainContentDefaultWidth);
-  --mCDWNumber: 80;
 
   /* Ancho por defecto del contenido
   que se vuelve dinÃ¡mico a traves del estilo
@@ -265,11 +264,10 @@ de arriba debido a su posicionamiento 'Fixed' */
 
   .main > .panelLeft {
     --mobilePanelWidth: 90%;
-    --mPWNumber: 90;
     width: var(--mobilePanelWidth) !important;
 
     left: calc( /* Conversión que hace que se le reste al 'left' del 'Panel Lateral' 90% en lugar de '20%' que es el valor para la versión de Escritorio */
-      ( var(--mCDW) - var(--mainContentWidth) ) * ( var(--mPWNumber) / (100 - var(--mCDWNumber)) )
+      ( var(--mCDW) - var(--mainContentWidth) ) * ( var(--mobilePanelWidth * 1%) / (100 - var(--mainContentWidth * 1%)) )
     ) !important;
   }
 
