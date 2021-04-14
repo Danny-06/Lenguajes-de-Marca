@@ -332,12 +332,12 @@ de arriba debido a su posicionamiento 'Fixed' */
   }
 
   .main > .panelLeft {
-    --mobilePanelWidth: 90%;
-    --mPWNumber: 90;
-    width: var(--mobilePanelWidth) !important;
+    --mobilePanelWidth: 90;
+    /* Conversión de unidades */
+    width: calc( var(--mobilePanelWidth) * 1% ) !important;
 
     left: calc( /* ConversiÃ³n que hace que se le reste al 'left' del 'Panel Lateral' 90% en lugar de '20%' que es el valor para la versiÃ³n de Escritorio */
-      ( var(--mCDW) - var(--mainContentWidth) ) * ( var(--mPWNumber) / (100 - var(--mCDWNumber)) )
+      ( var(--mCDW) - var(--mainContentWidth) ) * ( var(--mobilePanelWidth) / (100 - var(--mobilePanelWidth)) )
     ) !important;
   }
 
