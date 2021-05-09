@@ -66,6 +66,7 @@ nav .left:hover {
   border: solid #333 0.4vh;
 }
 
+
 nav .home {
   height: 100%;
 }
@@ -121,13 +122,14 @@ nav .user .icon {
   --mainPanelLeftWidth: calc(100% - var(--mCDW));
 }
 
+
 .main > .panelLeft {
   width: var(--mainPanelLeftWidth);
   height: 90%;
   overflow: auto;
   position: fixed;
 
-  /* Posicionamiento dinÃ¡mico del panel lateral según
+  /* Posicionamiento dinámico del panel lateral según
   el espacio que ocupe el contenedor "content" */
 
   /* (Ancho de Referencia) - (Ancho Dinámico) */
@@ -212,6 +214,41 @@ de arriba debido a su posicionamiento 'Fixed' */
               filter 0.5s
   ;
 }
+
+
+
+
+/*************************/
+
+/* Botón que modifica el estado del panel lateral */
+
+input.toggleInput {
+  display: none;
+}
+
+.panelLeftToggle {
+  cursor: pointer;
+}
+
+input#panelLeftToggle:checked ~ .main {
+  --mainContentWidth: 100%;
+}
+
+
+@media (max-width: 1050px) {
+  :root {
+    --mainContentWidth: 100%;
+  }
+
+  input#panelLeftToggle:checked ~ .main {
+    --mainContentWidth: 80%;
+  }
+}
+
+/*************************/
+
+
+
 
 
 .LIC {
