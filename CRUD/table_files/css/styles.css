@@ -17,13 +17,20 @@ img {
   user-select: none;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
 
+  min-width: 100%;
+  width: fit-content;
+  min-height: 100vh;
+  height: fit-content;
+}
 
 
 body {
   background: linear-gradient(0deg,#b18753,#dc8a8a);
   background-size: cover;
-  margin: 0;
   overflow: hidden;
 }
 
