@@ -218,6 +218,7 @@ de arriba debido a su posicionamiento 'Fixed' */
   display: inline-block;
   padding: 1%;
   overflow: auto;
+  overscroll-behavior: contain;
 
   transition: width 0.5s,
               filter 0.5s
