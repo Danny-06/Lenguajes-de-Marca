@@ -215,7 +215,7 @@ de arriba debido a su posicionamiento 'Fixed' */
   width: var(--mainContentWidth);
   max-height: 90vh;
   display: inline-block;
-  padding: 1%;
+/*   padding: 1%; */
   overflow: auto;
 
   transition: width 0.5s,
@@ -335,7 +335,7 @@ input#panelLeftToggle:checked ~ .main {
 .tableContainer {
   width: fit-content;
   margin: auto;
-  padding: 0 5%;
+/*   padding: 0 5%; */
   padding-top: 6vh;
 }
 
