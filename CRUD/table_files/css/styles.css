@@ -50,6 +50,8 @@ nav.navBar {
               0px 0px
               var(--Blur) var(--Spread);
   user-select: none;
+  position: relative;
+  z-index: 999;
 }
 
 
