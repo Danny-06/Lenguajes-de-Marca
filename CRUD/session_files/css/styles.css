@@ -133,12 +133,16 @@ nav .user .icon {
   --mainPanelLeftWidth: calc(100% - var(--mCDW));
 }
 
+.main {
+  position: relative;
+}
+
 
 .main > .panelLeft {
   width: var(--mainPanelLeftWidth);
   height: 90%;
   overflow: auto;
-  position: fixed;
+  position: absolute;
 
   /* Posicionamiento dinámico del panel lateral según
   el espacio que ocupe el contenedor "content" */
