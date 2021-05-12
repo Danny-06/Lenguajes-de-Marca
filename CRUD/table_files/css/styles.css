@@ -32,7 +32,7 @@ html, body {
 body {
   background: linear-gradient(0deg,#b18753,#dc8a8a);
   background-size: cover;
-  overflow: hidden;
+  overflow: auto;
 }
 
 
