@@ -221,7 +221,7 @@ de arriba debido a su posicionamiento 'Fixed' */
   width: var(--mainContentWidth);
   max-height: 90vh;
   display: inline-block;
-/*   padding: 1%; */
+  padding: 1rem 3rem;
 /*   overflow: auto; */
 
   transition: width 0.5s,
