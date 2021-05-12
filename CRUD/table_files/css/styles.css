@@ -135,7 +135,8 @@ nav .user .icon {
 
 
 .main {
-  height: 90vh; 
+  height: 90vh;
+  position: relative;
 }
 
 
@@ -143,7 +144,7 @@ nav .user .icon {
   width: var(--mainPanelLeftWidth);
   height: 90%;
   overflow: auto;
-  position: fixed;
+  position: absolute;
 
   /* Posicionamiento dinámico del panel lateral según
   el espacio que ocupe el contenedor "content" */
