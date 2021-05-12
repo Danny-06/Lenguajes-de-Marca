@@ -131,6 +131,11 @@ nav .user .icon {
 }
 
 
+.main {
+  height: 90vh; 
+}
+
+
 .main > .panelLeft {
   width: var(--mainPanelLeftWidth);
   height: 90%;
@@ -216,7 +221,7 @@ de arriba debido a su posicionamiento 'Fixed' */
   max-height: 90vh;
   display: inline-block;
 /*   padding: 1%; */
-  overflow: auto;
+/*   overflow: auto; */
 
   transition: width 0.5s,
               filter 0.5s
