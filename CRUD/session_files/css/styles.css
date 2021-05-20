@@ -18,15 +18,7 @@ img {
   user-select: none;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
 
-  min-width: 100%;
-  width: fit-content;
-  min-height: 100vh;
-  height: fit-content;
-}
 
 
 body {
@@ -50,8 +42,6 @@ nav.navBar {
               0px 0px
               var(--Blur) var(--Spread);
   user-select: none;
-  position: relative;
-  z-index: 999;
 }
 
 
@@ -118,7 +108,7 @@ nav .user .icon {
 :root {
   /* Ancho de referencia con el panel lateral abierto */
   --mainContentDefaultWidth: 80%;
-  /* Abreviación de la variable */
+  /* AbreviaciÃ³n de la variable */
   --mCDW: var(--mainContentDefaultWidth);
 
   /* Ancho por defecto del contenido
@@ -133,10 +123,6 @@ nav .user .icon {
   --mainPanelLeftWidth: calc(100% - var(--mCDW));
 }
 
-.main {
-  height: 90vh;
-}
-
 
 .main > .panelLeft {
   width: var(--mainPanelLeftWidth);
@@ -144,11 +130,11 @@ nav .user .icon {
   overflow: auto;
   position: absolute;
 
-  /* Posicionamiento dinámico del panel lateral según
+  /* Posicionamiento dinÃ¡mico del panel lateral segÃºn
   el espacio que ocupe el contenedor "content" */
 
-  /* (Ancho de Referencia) - (Ancho Dinámico) */
-  /* para dezplazar a la izquierda el menu según aumente
+  /* (Ancho de Referencia) - (Ancho DinÃ¡mico) */
+  /* para dezplazar a la izquierda el menu segÃºn aumente
   el ancho del contenedor "content" */
   left: calc(var(--mCDW) - var(--mainContentWidth));
   z-index: 999;
@@ -165,7 +151,7 @@ nav .user .icon {
   user-select: none;
 }
 
-/* Caja invisible que proporciona el espacio físico del menu real
+/* Caja invisible que proporciona el espacio fÃ­sico del menu real
 de arriba debido a su posicionamiento 'Fixed' */
 .main .panelLeftFake {
   width: calc(100% - var(--mainContentWidth));
@@ -223,8 +209,7 @@ de arriba debido a su posicionamiento 'Fixed' */
   max-height: 90vh;
   display: inline-block;
   padding: 1%;
-  overflow: auto;
-  overscroll-behavior: contain;
+  overflow: overlay;
 
   transition: width 0.5s,
               filter 0.5s
@@ -236,7 +221,7 @@ de arriba debido a su posicionamiento 'Fixed' */
 
 /*************************/
 
-/* Botón que modifica el estado del panel lateral */
+/* BotÃ³n que modifica el estado del panel lateral */
 
 input.toggleInput {
   display: none;
@@ -307,7 +292,7 @@ input#panelLeftToggle:checked ~ .main {
 
 
 
-/* Adaptación del Panel Lateral en movil */
+/* AdaptaciÃ³n del Panel Lateral en movil */
 @media (orientation: portrait),
        (max-width: 1050px) {
 
@@ -319,7 +304,7 @@ input#panelLeftToggle:checked ~ .main {
     --mobilePanelWidth: 90;
     width: calc(var(--mobilePanelWidth) * 1%) !important;
 
-    left: calc( /* Conversión que hace que se le reste al 'left' del 'Panel Lateral' 90% en lugar de '20%' que es el valor para la versión de Escritorio */
+    left: calc( /* ConversiÃ³n que hace que se le reste al 'left' del 'Panel Lateral' 90% en lugar de '20%' que es el valor para la versiÃ³n de Escritorio */
       ( var(--mCDW) - var(--mainContentWidth) ) * ( var(--mobilePanelWidth) / (100 - var(--mobilePanelWidth)) )
     ) !important;
   }
@@ -332,4 +317,132 @@ input#panelLeftToggle:checked ~ .main {
     width: 47%;
   }
 
+}
+
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 10px;
+  background: #33202f;
+  box-shadow: inset #614649 0 0 5px 0px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a87daa;
+  border: solid #574358 1px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #754a77;
+  border: solid #574358 1px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #643966;
+  border: solid #685469 1px;
+  border-radius: 10px;
+  box-shadow: inset #000 0 0 5px 0;
+}
+
+::-webkit-scrollbar-corner {
+  background: #643966;
+}
+
+
+
+
+
+
+
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(0deg,#1b1b1b,#1c1733);
+  }
+  
+  
+  nav.navBar {
+    background: linear-gradient(90deg,#211c2b,#262a42);
+    box-shadow: #000
+                0px 0px
+                var(--Blur) var(--Spread);
+  }
+
+  
+  nav .left {
+    border: solid transparent 0.4vh;
+  }
+  
+  nav .left:hover {
+    background: #41385d;
+    border: solid #000 0.4vh;
+  }
+  
+  nav .user .name {  
+    color: #fff;
+  }
+  
+  .main > .panelLeft {
+    background: linear-gradient(0deg,#101010,#0c1023);
+    box-shadow: #000
+                0px 4px
+                var(--Blur) var(--Spread);
+  }
+
+  .itemPanel {
+    background: linear-gradient(90deg,#0e3854,#3d1e50);
+    color: #fff;
+    box-shadow: #0009 0 0 5px 0;
+  }
+  
+  .itemPanel:hover {
+    background: linear-gradient(-90deg,#8531d0,#3a3942);
+    box-shadow: #fff9 0 0 11px 1px;
+    color: #000;
+  }
+  
+  .itemPanel:active {
+    background: linear-gradient(-90deg,#4d1a7b,#212025);
+    box-shadow: #000 0 0 20px 5px,
+                inset #fff 0 0 10px 0;
+    color: #000;
+    text-shadow: 0 0 10px #fff,
+                 0 0 10px #fff,
+                 0 0 10px #fff;
+  }
+  
+  .CIL {
+    background: #000;
+    box-shadow: #fff 0 0 10px 0;  
+  }
+  
+  
+  ::-webkit-scrollbar {
+      background: #0e0a1d;
+      box-shadow: inset #4c3182 0 0 5px 0px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+      background: #281d4a;
+      border: solid #000 1px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+      background: #4a1a65;
+      border: solid #0f0025 1px;
+  }
+  
+  ::-webkit-scrollbar-thumb:active {
+      background: #411179;
+      border: solid #0f0025 1px;
+      box-shadow: inset #4e4dc3 0 0 5px 0;
+  }
+  
+  ::-webkit-scrollbar-corner {
+      background: #281d4a;
+  }
+  
 }
