@@ -226,7 +226,7 @@ de arriba debido a su posicionamiento 'Fixed' */
 
 .itemPanel:hover {
   background:
-  var( --dark,   )
+  var( --dark,  linear-gradient(-90deg,#8531d0,#3a3942) )
   var( --light, linear-gradient(-90deg,#e0dc31,#56ff00) )
   ;
 
@@ -417,7 +417,7 @@ input#panelLeftToggle:checked ~ .main {
 
 ::-webkit-scrollbar-thumb:active {
   background:
-  var(--dark,   )
+  var(--dark,  #411179 )
   var(--light, #643966 )
   ;
   border: solid 1px;
@@ -442,9 +442,7 @@ input#panelLeftToggle:checked ~ .main {
 
 
 
-
-
-
+/* Modo Oscuro */
 
 @media (prefers-color-scheme: dark) {
 
