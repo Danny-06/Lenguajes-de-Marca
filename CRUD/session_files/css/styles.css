@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 * {
   box-sizing: border-box;
   font-family: Arial;
@@ -20,9 +22,21 @@ img {
 
 
 
+:root {
+  --true: initial;
+  --false: ;
+
+  --dark:  var(--false);
+  --light: var(--true);
+}
+
 
 body {
-  background: linear-gradient(0deg,#b18753,#dc8a8a);
+  background:
+  var( --dark,  linear-gradient(0deg, #1b1b1b, #1c1733) )
+  var( --light, linear-gradient(0deg, #b18753, #dc8a8a) )
+  ;
+  
   background-size: cover;
   margin: 0;
   overflow: hidden;
@@ -35,12 +49,20 @@ nav.navBar {
   width: 100%;
   height: 10vh;
   padding: 5px;
-  background: linear-gradient(90deg,#9e7db0,#eb8080);
+
+  background:
+  var( --dark,  linear-gradient(90deg, #211c2b, #262a42) )
+  var( --light, linear-gradient(90deg, #9e7db0, #eb8080) )
+  ;
+
+
   --Blur: 5px;
   --Spread: 2px;
-  box-shadow: #000
-              0px 0px
-              var(--Blur) var(--Spread);
+  box-shadow:
+ #000
+  0px 0px
+  var(--Blur) var(--Spread);
+
   user-select: none;
 }
 
@@ -63,8 +85,15 @@ nav .left {
 }
 
 nav .left:hover {
-  background: #e07474;
-  border: solid #333 0.4vh;
+  background:
+  var( --dark,  #41385d )
+  var( --light, #e07474 )
+  ;
+  border: solid 0.4vh;
+  border-color:
+  var( --dark,  #000 )
+  var( --light, #333 )
+  ;
 }
 
 
@@ -108,11 +137,11 @@ nav .user .icon {
 :root {
   /* Ancho de referencia con el panel lateral abierto */
   --mainContentDefaultWidth: 80%;
-  /* AbreviaciÃ³n de la variable */
+  /* Abreviación de la variable */
   --mCDW: var(--mainContentDefaultWidth);
 
   /* Ancho por defecto del contenido
-  que se vuelve dinÃ¡mico a traves del estilo
+  que se vuelve dinámico a traves del estilo
   en linea en el contenedor "main"
   para ajustarlo a la vez que se
   posiciona el panel lateral */
@@ -130,20 +159,26 @@ nav .user .icon {
   overflow: auto;
   position: absolute;
 
-  /* Posicionamiento dinÃ¡mico del panel lateral segÃºn
+  /* Posicionamiento dinámico del panel lateral según
   el espacio que ocupe el contenedor "content" */
 
-  /* (Ancho de Referencia) - (Ancho DinÃ¡mico) */
-  /* para dezplazar a la izquierda el menu segÃºn aumente
+  /* (Ancho de Referencia) - (Ancho Dinámico) */
+  /* para dezplazar a la izquierda el menu según aumente
   el ancho del contenedor "content" */
   left: calc(var(--mCDW) - var(--mainContentWidth));
   z-index: 999;
-  background: linear-gradient(0deg,#7b5a90,#bf6985);
+  background:
+  var( --dark,  linear-gradient(0deg, #101010, #0c1023) )
+  var( --light, linear-gradient(0deg, #7b5a90, #bf6985) )
+  ;
+
   --Blur: 3px;
   --Spread: 2px;
-  box-shadow: #000
-              0px 4px
-              var(--Blur) var(--Spread);
+  box-shadow:
+ #000
+  0px 4px
+  var(--Blur) var(--Spread);
+
   transition: left 0.5s,
               width 0.5s
   ;
@@ -151,7 +186,7 @@ nav .user .icon {
   user-select: none;
 }
 
-/* Caja invisible que proporciona el espacio fÃ­sico del menu real
+/* Caja invisible que proporciona el espacio físico del menu real
 de arriba debido a su posicionamiento 'Fixed' */
 .main .panelLeftFake {
   width: calc(100% - var(--mainContentWidth));
@@ -169,7 +204,11 @@ de arriba debido a su posicionamiento 'Fixed' */
   margin: 2vh auto;
   padding: 1rem 1vh;
 
-  background: linear-gradient(90deg,#31b3e0,#b400ff);
+  background:
+  var( --dark,  linear-gradient(90deg, #0e3854, #3d1e50) )
+  var( --light, linear-gradient(90deg, #31b3e0, #b400ff) )
+  ;
+
   color: #fff;
   border-radius: 10px;
   box-shadow: #0009 0 0 5px 0;
@@ -186,13 +225,25 @@ de arriba debido a su posicionamiento 'Fixed' */
 }
 
 .itemPanel:hover {
-  background: linear-gradient(-90deg,#e0dc31,#56ff00);
-  box-shadow: #000 0 0 20px 5px;
+  background:
+  var( --dark,   )
+  var( --light, linear-gradient(-90deg,#e0dc31,#56ff00) )
+  ;
+
+  box-shadow:
+  var( --dark,  #fff9 )
+  var( --light, #000 )
+  0 0 20px 5px
+  ;
+
   color: #000;
 }
 
 .itemPanel:active {
-  background: linear-gradient(-90deg,#7d7c29,#396523);
+  background:
+  var( --dark,  linear-gradient(-90deg, #4d1a7b, #212025) )
+  var( --light, linear-gradient(-90deg, #7d7c29, #396523) )
+  ;
   box-shadow: #000 0 0 20px 5px,
               inset #fff 0 0 10px 0
   ;
@@ -221,7 +272,7 @@ de arriba debido a su posicionamiento 'Fixed' */
 
 /*************************/
 
-/* BotÃ³n que modifica el estado del panel lateral */
+/* Botón que modifica el estado del panel lateral */
 
 input.toggleInput {
   display: none;
@@ -292,7 +343,7 @@ input#panelLeftToggle:checked ~ .main {
 
 
 
-/* AdaptaciÃ³n del Panel Lateral en movil */
+/* Adaptación del Panel Lateral en movil */
 @media (orientation: portrait),
        (max-width: 1050px) {
 
@@ -304,7 +355,7 @@ input#panelLeftToggle:checked ~ .main {
     --mobilePanelWidth: 90;
     width: calc(var(--mobilePanelWidth) * 1%) !important;
 
-    left: calc( /* ConversiÃ³n que hace que se le reste al 'left' del 'Panel Lateral' 90% en lugar de '20%' que es el valor para la versiÃ³n de Escritorio */
+    left: calc( /* Conversión que hace que se le reste al 'left' del 'Panel Lateral' 90% en lugar de '20%' que es el valor para la versión de Escritorio */
       ( var(--mCDW) - var(--mainContentWidth) ) * ( var(--mobilePanelWidth) / (100 - var(--mobilePanelWidth)) )
     ) !important;
   }
@@ -320,35 +371,72 @@ input#panelLeftToggle:checked ~ .main {
 }
 
 
+
+/* Scrollbar */
+
 ::-webkit-scrollbar {
   width: 12px;
   height: 10px;
-  background: #33202f;
-  box-shadow: inset #614649 0 0 5px 0px;
+  background:
+  var(--dark,  #0e0a1d )
+  var(--light, #33202f )
+  ;
+  box-shadow: inset
+  var(--dark,  #4c3182 )
+  var(--light, #614649 )
+  0 0 5px 0px
+  ;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #a87daa;
-  border: solid #574358 1px;
+  background:
+  var(--dark,  #281d4a )
+  var(--light, #a87daa )
+  ;
+  border: solid 1px;
+  border-color:
+  var(--dark,  #000 )
+  var(--light, #574358 )
+  ;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #754a77;
-  border: solid #574358 1px;
+  background:
+  var(--dark,  #4a1a65 )
+  var(--light, #754a77 )
+  ;
+  border: solid 1px;
+  border-color:
+  var(--dark,  #0f0025 )
+  var(--light, #574358 )
+  ;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background: #643966;
-  border: solid #685469 1px;
+  background:
+  var(--dark,   )
+  var(--light, #643966 )
+  ;
+  border: solid 1px;
+  border-color:
+  var(--dark,  #411179 )
+  var(--light, #685469 )
+  ;
   border-radius: 10px;
-  box-shadow: inset #000 0 0 5px 0;
+  box-shadow: inset
+  var(--dark,  #4e4dc3 )
+  var(--light, #000 )
+  0 0 5px 0;
 }
 
 ::-webkit-scrollbar-corner {
-  background: #643966;
+  background:
+  var(--dark,  #281d4a )
+  var(--light, #643966 )
+  ;
 }
 
 
@@ -359,90 +447,10 @@ input#panelLeftToggle:checked ~ .main {
 
 
 @media (prefers-color-scheme: dark) {
-  body {
-    background: linear-gradient(0deg,#1b1b1b,#1c1733);
-  }
-  
-  
-  nav.navBar {
-    background: linear-gradient(90deg,#211c2b,#262a42);
-    box-shadow: #000
-                0px 0px
-                var(--Blur) var(--Spread);
-  }
 
-  
-  nav .left {
-    border: solid transparent 0.4vh;
-  }
-  
-  nav .left:hover {
-    background: #41385d;
-    border: solid #000 0.4vh;
-  }
-  
-  nav .user .name {  
-    color: #fff;
-  }
-  
-  .main > .panelLeft {
-    background: linear-gradient(0deg,#101010,#0c1023);
-    box-shadow: #000
-                0px 4px
-                var(--Blur) var(--Spread);
-  }
-
-  .itemPanel {
-    background: linear-gradient(90deg,#0e3854,#3d1e50);
-    color: #fff;
-    box-shadow: #0009 0 0 5px 0;
-  }
-  
-  .itemPanel:hover {
-    background: linear-gradient(-90deg,#8531d0,#3a3942);
-    box-shadow: #fff9 0 0 11px 1px;
-    color: #000;
-  }
-  
-  .itemPanel:active {
-    background: linear-gradient(-90deg,#4d1a7b,#212025);
-    box-shadow: #000 0 0 20px 5px,
-                inset #fff 0 0 10px 0;
-    color: #000;
-    text-shadow: 0 0 10px #fff,
-                 0 0 10px #fff,
-                 0 0 10px #fff;
-  }
-  
-  .CIL {
-    background: #000;
-    box-shadow: #fff 0 0 10px 0;  
-  }
-  
-  
-  ::-webkit-scrollbar {
-      background: #0e0a1d;
-      box-shadow: inset #4c3182 0 0 5px 0px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-      background: #281d4a;
-      border: solid #000 1px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-      background: #4a1a65;
-      border: solid #0f0025 1px;
-  }
-  
-  ::-webkit-scrollbar-thumb:active {
-      background: #411179;
-      border: solid #0f0025 1px;
-      box-shadow: inset #4e4dc3 0 0 5px 0;
-  }
-  
-  ::-webkit-scrollbar-corner {
-      background: #281d4a;
+  :root {
+    --dark:  var(--true);
+    --light: var(--false);
   }
   
 }
