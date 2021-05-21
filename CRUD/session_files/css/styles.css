@@ -22,7 +22,7 @@ img {
 
 
 
-:root {
+#app {
   --true: initial;
   --false: ;
 
@@ -31,16 +31,31 @@ img {
 }
 
 
+#prefers-color-scheme {
+  display: none;
+}
+
+
+/* Hacel click en el icono del usuario cambia el esquema de colores */
+#prefers-color-scheme:checked ~ #app {
+  --dark:  var(--true);
+  --light: var(--false);
+}
+
+
 body {
+  margin: 0;
+  overflow: hidden;
+}
+
+#app {
   background:
   var( --dark,  linear-gradient(0deg, #1b1b1b, #1c1733) )
   var( --light, linear-gradient(0deg, #b18753, #dc8a8a) )
   ;
-  
   background-size: cover;
-  margin: 0;
-  overflow: hidden;
 }
+
 
 
 nav.navBar {
@@ -372,6 +387,7 @@ input#panelLeftToggle:checked ~ .main {
 
 
 
+
 /* Scrollbar */
 
 ::-webkit-scrollbar {
@@ -439,6 +455,14 @@ input#panelLeftToggle:checked ~ .main {
   ;
 }
 
+/* Mozilla */
+* {
+  scrollbar-color:
+  var( --dark,  #281d4a #0e0a1d )
+  var( --light, #a87daa #33202f )
+  ;
+  scrollbar-width: thin;
+}
 
 
 
@@ -446,9 +470,17 @@ input#panelLeftToggle:checked ~ .main {
 
 @media (prefers-color-scheme: dark) {
 
-  :root {
+  #app {
     --dark:  var(--true);
     --light: var(--false);
   }
   
+
+  /* Hacel click en el icono del usuario cambia el esquema de colores */
+  #prefers-color-scheme:checked ~ #app {
+    --dark:  var(--false);
+    --light: var(--true);
+  }
+  
 }
+
