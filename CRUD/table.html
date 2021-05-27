@@ -9,48 +9,15 @@
       <link rel="icon" href="favicon.ico">
       <link rel="stylesheet" href="table_files/css/styles.css">
       <script defer src="table_files/js/scripts.js"></script>
-      <style>
-      ::-webkit-scrollbar {
-          width: 12px;
-          height: 10px;
-          background: #33202f;
-          box-shadow: inset #614649 0 0 5px 0px;
-          border-radius: 10px;
-      }
-
-      ::-webkit-scrollbar-thumb {
-          background: #a87daa;
-          border: solid #574358 1px;
-          border-radius: 10px;
-      }
-
-      ::-webkit-scrollbar-thumb:hover {
-          background: #754a77;
-          border: solid #574358 1px;
-          border-radius: 10px;
-      }
-
-      ::-webkit-scrollbar-thumb:active {
-          background: #643966;
-          border: solid #685469 1px;
-          border-radius: 10px;
-          box-shadow: inset #000 0 0 5px 0;
-      }
-
-      ::-webkit-scrollbar-corner {
-          background: #643966;
-      }
-      </style>
   </head>
 
   <body>
+      <input id="prefers-color-scheme" type="checkbox">
       <input id="panelLeftToggle" class="toggleInput" type="checkbox">
       <nav class="navBar">
-          <div class="left">
-              <label class="panelLeftToggle" for="panelLeftToggle">
-                  <img class="home" src="session_files/assets/zoho-logo.png">
-              </label>
-          </div>
+          <label class="left panelLeftToggle" for="panelLeftToggle">
+            <img class="home" src="session_files/assets/icono-menu.png">
+          </label>
           <div class="right">
               <div class="user">
                   <div class="name">
@@ -98,7 +65,7 @@
                               <div class="col">
                                   <img class="opt" src="table_files/assets/modificar.png">
                                   <div class="space"></div>
-                                  <img class="opt" src="table_files/assets/delete.png"></div>
+                                  <img class="opt deleteRow" src="table_files/assets/delete.png"></div>
                               <div class="col">aWQ=</div>
                               <div class="col">Objeto1</div>
                               <div class="col">Tipo1</div>
@@ -111,6 +78,18 @@
                   </div><!--div class="table"-->
               </div><!--div class="tableContainer"-->
           </div><!--div class="content"-->
+          <div class="popup">
+            <div class="box">
+                  <div class="block _1">
+                      <label>¿Está seguro de que quiere eliminar este dato?</label>
+                  </div><!--div class="block _1"-->
+                  <img class="icon" src="delete_files/assets/carita triste.webp">
+                  <div class="block _2">
+                    <input class="delete" type="submit" value="Eliminar">
+                    <input class="cancel" type="submit" value="Cancelar">
+                  </div><!--div class="block _1"-->
+              </div>
+           </div>
       </div><!--div class="main"-->
   </body>
 

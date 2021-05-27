@@ -1,4 +1,15 @@
 
+const popup = document.querySelector('.popup');
+
+const cancelPopupButton = popup.querySelector('input.cancel');
+const deletePopupButton = popup.querySelector('input.delete');
+
+cancelPopupButton.addEventListener("click", HidePopup);
+deletePopupButton.addEventListener("click", Reload);
+
+
+
+
 // Clonar la 1ª fila para rellenar la tabla
 let numFilasExtra = 15;
 for(let i = 1; i <= numFilasExtra; i++) {
@@ -7,40 +18,26 @@ for(let i = 1; i <= numFilasExtra; i++) {
   tBody.append(row);
 }
 
-/* Se ha comentado el código debido a que se ha encontrado una  alternativa funcional con CSS
+const deleteRowButtons = document.querySelectorAll('.deleteRow');
 
-// Botón de la izquierda de la barra de navegación con el logo
-// let home = document.querySelector('.home').parentElement;
-
-// Contenedor Principal
-let main = document.querySelector('.main');
-
-// home.addEventListener("click", sidePanel);
-
-let toggle = 0;
+deleteRowButtons.forEach(
+  (button) => button.addEventListener("click", ShowPopup)
+);
 
 
 
+// Funciones
 
-// Si es un usuario de movil,
-// ocultar el panel lateral y
-// ajustar variable de la palanca
-
-if(navigator.userAgent.includes("Mobile") || window.innerWidth <= 1050) {
-  main.setAttribute('style', '--mainContentWidth: 100%;')
-  toggle++;
+function ShowPopup() {
+  popup.classList.add('open');
 }
 
-function sidePanel() {
-  if(toggle == 0) {
-    // Aumentar el tamaño del contenedor que contiene el contenido de la página y ocultar el panel lateral
-    main.style = '--mainContentWidth: 100%';
-    toggle++;
-  } else {
-    // Disminuir el tamaño del contenedor que contiene el contenido de la página y mostrar el panel lateral
-    main.setAttribute('style', '--mainContentWidth:;');
-    toggle--;
-  }
+
+function HidePopup() {
+  popup.classList.remove('open');
 }
 
-*/
+function Reload() {
+  location.href = location.href;
+}
+
