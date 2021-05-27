@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <title>Table</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+      <meta name="mobile-web-app-capable" content="yes">
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="table_files/css/styles.css">
+      <script defer src="table_files/js/scripts.js"></script>
+  </head>
+
+  <body>
+      <input id="prefers-color-scheme" type="checkbox">
+      <input id="panelLeftToggle" class="toggleInput" type="checkbox">
+      <nav class="navBar">
+          <label class="left panelLeftToggle" for="panelLeftToggle">
+            <img class="home" src="session_files/assets/icono-menu.png">
+          </label>
+          <div class="right">
+              <div class="user">
+                  <div class="name">
+                      Usuario
+                  </div>
+                  <img class="icon" src="session_files/assets/userIcon.webp">
+              </div>
+          </div>
+      </nav>
+      <div class="main">
+          <aside class="panelLeft">
+              <div class="itemPanel">OPCION</div>
+              <div class="itemPanel">OPCION</div>
+              <div class="itemPanel">OPCION</div>
+              <div class="itemPanel">OPCION</div>
+              <div class="itemPanel">OPCION</div>
+              <div class="itemPanel">OPCION</div>
+              <div class="itemPanel">OPCION</div>
+              <div class="itemPanel">OPCION</div>
+              <div class="itemPanel">OPCION</div>
+              <div class="itemPanel">OPCION</div>
+          </aside><!--aside class="panelLeft"-->
+          <aside class="panelLeftFake"></aside><!--
+
+       --><div class="content">
+              <div class="tableContainer">
+                  <div class="table">
+
+                      <div class="thead">
+
+                          <div class="row">
+                              <div class="col">Opciones</div>
+                              <div class="col">ID</div>
+                              <div class="col">Nombre</div>
+                              <div class="col">Tipo</div>
+                              <div class="col">Cantidad</div>
+                              <div class="col">Precio</div>
+                          </div>
+
+                      </div><!--div class="thead"-->
+
+                      <div class="tbody">
+
+                          <div class="row">
+                              <div class="col">
+                                  <img class="opt" src="table_files/assets/modificar.png">
+                                  <div class="space"></div>
+                                  <img class="opt deleteRow" src="table_files/assets/delete.png"></div>
+                              <div class="col">aWQ=</div>
+                              <div class="col">Objeto1</div>
+                              <div class="col">Tipo1</div>
+                              <div class="col">13</div>
+                              <div class="col">Indefinido</div>
+                          </div>
+
+                      </div><!--div class="tbody"-->
+
+                  </div><!--div class="table"-->
+              </div><!--div class="tableContainer"-->
+          </div><!--div class="content"-->
+          <div class="popup">
+            <div class="box">
+                  <div class="block _1">
+                      <label>¿Está seguro de que quiere eliminar este dato?</label>
+                  </div><!--div class="block _1"-->
+                  <img class="icon" src="delete_files/assets/carita triste.webp">
+                  <div class="block _2">
+                    <input class="delete" type="submit" value="Eliminar">
+                    <input class="cancel" type="submit" value="Cancelar">
+                  </div><!--div class="block _1"-->
+              </div>
+           </div>
+      </div><!--div class="main"-->
+  </body>
+
+</html>
