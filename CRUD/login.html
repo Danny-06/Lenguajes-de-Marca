@@ -2,27 +2,34 @@
 <html>
 
   <head>
-    <title>Login</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="login_files/css/styles.css">
+      <title>Login</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="mobile-web-app-capable" content="yes">
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="login_files/css/styles.css">
+      <script defer src="login_files/js/scripts.js"></script>
   </head>
 
   <body>
-    <div class="myContainer">
-      <img class="welcome" src="login_files/assets/welcome.png">
-      <form class="form" action="">
-        <div class="block">
-          <!--label>Usuario</label-->
-          <input class="user" type="input" autofocus placeholder="Nombre de Usuario"></input>
-          <!--label>Contraseña</label-->
-          <input class="password" type="password" placeholder="Contraseña"></input>
-        </div>
-        <input class="submit" type="submit"></input>
-      </form>
-    </div>
+      <div class="myContainer">
+          <img class="welcome" src="login_files/assets/welcome.png">
+          <form class="form" action="">
+              <div class="block">
+                  <!--label>Usuario</label-->
+                  <input class="user" type="text" autofocus required placeholder="Correo"></input>
+                  <small class="details">
+                    El correo solo puede contener letras y números seguido de una "@" más nombre de dominio seguido de un "punto" más 1 palabra de entre 2 y 4 carácteres
+                  </small>
+                  <!--label>Contraseña</label-->
+                  <input class="password" type="password" required placeholder="Contraseña"></input>
+                  <small class="details">
+                    La contraseña debe tener entre 6 y 20 carácteres, tanto mayúsculas como minúsculas, al menos un número y <br> un carácter especial (#&amp;@!%$-*)
+                  </small>
+              </div>
+            <input class="submit" type="submit"></input>
+          </form>
+      </div>
   </body>
 
 </html>
