@@ -236,6 +236,11 @@ small.details.error {
 }
 
 
+small.details::before {
+  content: '* ';
+}
+
+
 /*****************/
 /**Media Queries**/
 /*****************/
