@@ -45,11 +45,9 @@ function ValidarLogin() {
 }
 
 function desmarcarError() {
-  emailInput.classList.remove('error');
-  emailDetails.classList.remove('error');
-
-  passwordInput.classList.remove('error');
-  passwordDetails.classList.remove('error');
+  document.querySelectorAll('.form *').forEach(
+    (e) => e.classList.remove('error')
+  )
 }
 
 
