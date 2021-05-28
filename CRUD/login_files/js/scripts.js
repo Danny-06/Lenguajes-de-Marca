@@ -58,7 +58,7 @@ function esCorreoValido() {
 }
 
 
-const regexPassword = /^(?=.*?[A-ZÑ])(?=.*?[a-zñ])(?=.*?[#&@!%$\-*]).{6,20}/;
+const regexPassword = /^(?=.*?[A-ZÑ])(?=.*?[a-zñ])(?=.*?[#&@!%$\-*]).{6,20}$/;
 
 function esContrasenaValida() {
   return regexPassword.test(passwordInput.value);
