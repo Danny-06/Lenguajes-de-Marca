@@ -8,59 +8,35 @@
       <link rel="icon" href="favicon.ico">
       <link rel="stylesheet" href="input_files/css/styles.css">
       <script defer src="input_files/js/scripts.js"></script>
-      <style>
-      ::-webkit-scrollbar {
-          width: 12px;
-          height: 10px;
-          background: #33202f;
-          box-shadow: inset #614649 0 0 5px 0px;
-          border-radius: 10px;
-      }
-
-      ::-webkit-scrollbar-thumb {
-          background: #a87daa;
-          border: solid #574358 1px;
-          border-radius: 10px;
-      }
-
-      ::-webkit-scrollbar-thumb:hover {
-          background: #754a77;
-          border: solid #574358 1px;
-          border-radius: 10px;
-      }
-
-      ::-webkit-scrollbar-thumb:active {
-          background: #643966;
-          border: solid #685469 1px;
-          border-radius: 10px;
-          box-shadow: inset #000 0 0 5px 0;
-      }
-
-      ::-webkit-scrollbar-corner {
-          background: #643966;
-      }
-      </style>
   </head>
 
   <body>
       <div class="main">
-          <div class="box">
+          <form class="box form">
               <div class="block _1">
                   <label>ID</label>
-                  <input autofocus type="text" value="1"></input>
+                  <input class="id" type="number" required autofocus>
+                  <small class="details">Solo números</small>
+                  
                   <label>Nombre</label>
-                  <input type="text" value="objeto"></input>
+                  <input class="nombre" type="text" required value="">
+                  <small class="details">Debe empezar con letra y solo puede contener letras y números</small>
               </div><!--div class="block _1"-->
               <div class="block _2">
                   <label>Tipo</label>
-                  <input type="text" value="tipo"></input>
+                  <input class="tipo" type="text" required value="">
+                  <small class="details">Debe empezar con letra y solo puede contener letras y números</small>
+
                   <label>Cantidad</label>
-                  <input type="number" value="0"></input>
+                  <input class="cantidad" type="number" required value="0">
+                  <small class="details">Solo números</small>
+
                   <label>Precio</label>
-                  <input type="number" value="0"></input>
+                  <input class="precio" type="number" required value="0">
+                  <small class="details">Solo números</small>
               </div><!--div class="block _2"-->
-              <input type="submit"></input>
-          </div><!--div class="box"-->
+              <input class="submit" type="submit" required value="Aceptar">
+          </form><!--div class="box"-->
       </div><!--div class="main"-->
   </body>
 
