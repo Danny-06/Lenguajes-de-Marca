@@ -265,7 +265,7 @@ small.details::before {
 
 }
 
-@media (min-aspect-ratio: 160/73) {
+@media (min-aspect-ratio: 160/70) {
   
   form.form {
     width: 70%
