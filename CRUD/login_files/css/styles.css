@@ -80,7 +80,7 @@ body {
   background: linear-gradient(90deg,#452c52,#173148);
   border: solid calc(0.2vw + 0.4vh) #121537;
   border-radius: calc(1.2vw + 0.8vh);
-  height: fit-content;
+  height: var(--fit-content);;
   margin: auto;
 }
 
